@@ -11,10 +11,13 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">{{ $t('welcome') }}</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
+
+    <button @click="$i18n.locale='FR'">fr</button>
+    <button @click="$i18n.locale='EN'">en</button>
   </header>
 
   <RouterView />
