@@ -1,5 +1,16 @@
 @import './base.css';
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin : 0;
+}
+
 #app {
-  margin: 0 auto;
+  margin: 0 ;
+}
+
+
+*:not(a){
+  font-family: "Space Grotesk";
 }
