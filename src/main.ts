@@ -8,6 +8,14 @@ import App from './App.vue'
 import router from './router'
 import EN from './i18n/en.json'
 import FR from './i18n/fr.json'
+import Lenis from '@studio-freight/lenis'
+
+const lenis = new Lenis()
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf)
 
 const app = createApp(App)
 
