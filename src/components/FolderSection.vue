@@ -62,7 +62,7 @@ function handleShowPage(page){
   border: black 1px solid;
   border-radius: 15px;
 
-  transition: .7s cubic-bezier(.32,1.45,.63,.86);
+  transition: .7s cubic-bezier(.3,1.31,.53,.95);
 
   transform: perspective(40px) translateZ(0)
   rotate3d(1,0,0,-0.1deg);
