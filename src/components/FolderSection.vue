@@ -22,8 +22,7 @@ const pages = ref([
 function handleShowPage(page){
   const e = document.getElementById('page'+page.name)
   e.style.transform= page.shown ? `translateY(${page.id*5}%) perspective(40px) translateZ(0)
-  rotate3d(1,0,0,-0.1deg)` : 'translateY(-90%) perspective(40px) translateZ(0)' +
-      '  rotate3d(1,0,0,-0.1deg)';
+  rotate3d(1,0,0,-0.1deg)` : 'translateY(-90%)';
   page.shown = !page.shown
 }
 
@@ -62,7 +61,7 @@ function handleShowPage(page){
   border: black 1px solid;
   border-radius: 15px;
 
-  transition: .5s ease-in-out;
+  transition: .5s cubic-bezier(.47,1.5,.41,.8);;
 
   transform: perspective(40px) translateZ(0)
   rotate3d(1,0,0,-0.1deg);
@@ -106,10 +105,7 @@ function handleShowPage(page){
   left:25vw;
 }
 
-
-
-
-
+/*emplacement des boutons vers les befores*/
 .pageplant-003>button{
   top:-33px;
   left:4vw;
@@ -135,7 +131,7 @@ function handleShowPage(page){
   background: #fffaf1;
   /*clip-path: path('M 0 25 C 8 25 11 0 17 0 T 130 0 C 138 0 139 25 147 25 L 0 25 Z');*/
   /*clip-path: path('M 0 25 C 10 25 7 0 17 0 T 130 0 C 140 0 137 25 147 25 L 0 25 Z');*/
-  clip-path: path('M 0 28 C 11 28 7 0 17 0 T 130 0 C 139 0 137 28 147 28 L 0 28 Z');
+  clip-path: path('M 0 28 C 11 28 7 0 17 0 T 130 0 C 139 0 137 28 147 28 L 0 30 Z');
 
   z-index: 2;
 }
