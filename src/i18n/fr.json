@@ -1,3 +1,38 @@
 {
-  "welcome": "Bienvenue"
+  "menu" : {
+    "home" : "Accueil",
+    "about": "A propos",
+    "legal": "legal",
+    "contact": "contact"
+  },
+  "home": {
+    "welcome": "BIENVENUE SUR WebYon!",
+    "introduction" : "Je suis Vivian, un développeur web qui veut partager ses expériences, et qui travaille sur du web design & UI/UX !"
+  },
+  "more": {
+    "skate": {
+      "pratique": "Pratique sportive"
+    },
+    "guitare": {
+      "pratique": "Pratique musicale"
+    },
+    "arts": {
+      "pratique": "Intérpet culturel"
+    },
+    "year": "an",
+    "years": "ans"
+  },
+  "about": {
+    "header": "Je m'appelle Vivian, je suis un développeur web qui est enthousiaste à l'idée de créer, modeler et expérimenter !",
+    "about1": "Entouré par des personnes créatives provenants de différents domaines\n      (animation cinématographique 2D, musique, photographie...), j'ai découvert le plaisir de laisser exprimer sa\n      fibre artistique. J'ai ainsi eu envie de découvrir le monde du design web.",
+    "about2": "Ce site fait office de portfolio de mes expériences, compétences front-end, mais est avant tout un\n      challenge que je me suis lancé. Le tout premier site que j'ai imaginé et développé.",
+    "formations": "Formations",
+    "bac": "Bac S Sciences de l'Ingénieur",
+    "licence":  "Licence Informatique",
+    "master": "Master Informatique E-Services"
+  },
+  "contact": {
+    "header": "Merci beaucoup de me faire des retours sur mon travail !\n      J'ai hâte de savoir ce que vous en avez pensé, et comment je pourrais l'améliorer",
+    "email": "Vous pouvez principalement me contacter par email :"
+  }
 }
