@@ -5,17 +5,17 @@ const pages = ref([
   {
     id:0,
     name:'plant-003',
-    shown:false
+    shown:false,
   },
   {
     id:1,
     name:'oil-lamp',
-    shown:false
+    shown:false,
   },
   {
     id:2,
     name:'lava-lamp',
-    shown:false
+    shown:false,
   },
 ]);
 
@@ -41,6 +41,7 @@ function handleShowPage(page){
 
 
 <style scoped>
+
 .folder{
   height: 110vh;
   display: flex;
@@ -61,7 +62,7 @@ function handleShowPage(page){
   border: black 1px solid;
   border-radius: 15px;
 
-  transition: .5s cubic-bezier(.47,1.5,.41,.8);;
+  transition: .7s cubic-bezier(.32,1.45,.63,.86);
 
   transform: perspective(40px) translateZ(0)
   rotate3d(1,0,0,-0.1deg);
