@@ -61,7 +61,7 @@ const pages = ref([
     shown:false,
     content:'/src/assets/model/bandana.gif',
     subtitle:"bleu, paisley",
-    details:"noué"
+    details:"noué autour du coup"
   },
   {
     id:8,
@@ -89,17 +89,17 @@ const pages = ref([
     id:11,
     name:'plant-002',
     shown:false,
-    content:'/src/assets/model/plant-01.gif',
+    content:'/src/assets/model/plant-02.gif',
     subtitle:"plante d'intérieur",
-    details:"pothos"
+    details:"succulent"
   },
   {
     id:12,
     name:'plant-003',
     shown:false,
-    content:'/src/assets/model/plant-01.gif',
+    content:'/src/assets/model/plant-03.gif',
     subtitle:"plante d'intérieur",
-    details:"pothos"
+    details:"aloe vera"
   },
   {
     id:13,
