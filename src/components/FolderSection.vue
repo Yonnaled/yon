@@ -7,19 +7,25 @@ const pages = ref([
     id:0,
     name:'book-001',
     shown:false,
-    content:'/src/assets/model/klimt.gif'
+    content:'/src/assets/model/klimt.gif',
+    subtitle:"Gustav Klimt",
+    details:"symbolisme"
   },
   {
     id:1,
     name:'book-002',
     shown:false,
-    content:'/src/assets/model/monet.gif'
+    content:'/src/assets/model/monet.gif',
+    subtitle:"Claude Monet",
+    details:"impressionnisme"
   },
   {
     id:2,
     name:'book-003',
     shown:false,
-    content:'/src/assets/model/rochat.gif'
+    content:'/src/assets/model/rochat.gif',
+    subtitle:"Maya Rochat",
+    details:"photographie - peinture - montage"
   },
   {
     id:3,
@@ -31,7 +37,9 @@ const pages = ref([
     id:4,
     name:'human',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/plant-01.gif',
+    subtitle:"Vivian",
+    details:"web developper"
   },
   {
     id:5,
@@ -43,19 +51,25 @@ const pages = ref([
     id:6,
     name:'agfa',
     shown:false,
-    content:'/src/assets/model/agfa.gif'
+    content:'/src/assets/model/agfa.gif',
+    subtitle:"agfamatic 200 sensor",
+    details:"appareil photo argentique"
   },
   {
     id:7,
     name:'bandana',
     shown:false,
-    content:'/src/assets/model/bandana.gif'
+    content:'/src/assets/model/bandana.gif',
+    subtitle:"bleu, paisley",
+    details:"noué"
   },
   {
     id:8,
     name:'prince',
     shown:false,
-    content:'/src/assets/model/agfa.gif'
+    content:'/src/assets/model/agfa.gif',
+    subtitle:"Le petit prince",
+    details:"étain"
   },
   {
     id:9,
@@ -67,43 +81,55 @@ const pages = ref([
     id:10,
     name:'plant-001',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/plant-01.gif',
+    subtitle:"plante d'intérieur",
+    details:"pothos"
   },
   {
     id:11,
     name:'plant-002',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/plant-01.gif',
+    subtitle:"plante d'intérieur",
+    details:"pothos"
   },
   {
     id:12,
     name:'plant-003',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/plant-01.gif',
+    subtitle:"plante d'intérieur",
+    details:"pothos"
   },
   {
     id:13,
     name:'plants',
     shown:false,
-    divider:true
+    divider:true,
   },
   {
     id:14,
     name:'amplifier',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/plant-01.gif',
+    subtitle:"amplifier",
+    details:"VOX VT20+"
   },
   {
     id:15,
     name:'harmonica',
     shown:false,
-    content:'/src/assets/model/harmonica.gif'
+    content:'/src/assets/model/harmonica.gif',
+    subtitle:"Hohner",
+    details:"Marine Band (C)"
   },
   {
     id:16,
     name:'strokes',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/plant-01.gif',
+    subtitle:"The Strokes",
+    details:"Room on fire"
   },
   {
     id:17,
@@ -144,7 +170,11 @@ function handleShowPage(page){
   <div class="folder">
     <div v-for="page in pages.reverse()" :id="'page'+page.id" :class="['page',page.divider?'page-divider':'']" :key="page.name">
       <button @click="handleShowPage(page)" :class="['btn'+page.name,'btnPage']">{{page.name}}</button>
-      <img :src="page.content" alt="">
+      <div class="subtitle">{{page.subtitle}}</div>
+      <div class="details">{{page.details}}</div>
+      <div class="img-container">
+        <img :src="page.content" alt="">
+      </div>
     </div>
 
   </div>
@@ -202,6 +232,17 @@ function handleShowPage(page){
 .page-divider>button{
   cursor: auto;
 }
+
+.subtitle{
+  font-weight: 500;
+  margin:1.5vw 2vw 0
+}
+.details{
+  font-weight: 450;
+  margin-left: 2vw;
+  color: #c5c5c5;
+}
+
 
 .shownPage{
   transform:  translateY(-40%);
@@ -445,10 +486,19 @@ function handleShowPage(page){
 
 
 
-/*video*/
-.page img {
-  width: 50vw;
+/*3d models*/
+.img-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+.page>.img-container> img {
+
+  margin:auto;
+  max-height: 30vh;
+  object-fit: cover;
+}
+
 
 
 @media (min-width: 1024px) {
