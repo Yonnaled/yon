@@ -11,6 +11,6 @@ body {
 }
 
 
-*:not(a){
+*{
   font-family: "Space Grotesk";
 }

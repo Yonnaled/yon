@@ -7,19 +7,19 @@ const pages = ref([
     id:0,
     name:'book-001',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/klimt.gif'
   },
   {
     id:1,
     name:'book-002',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/monet.gif'
   },
   {
     id:2,
     name:'book-003',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/rochat.gif'
   },
   {
     id:3,
@@ -49,7 +49,7 @@ const pages = ref([
     id:7,
     name:'bandana',
     shown:false,
-    content:'/src/assets/model/agfa.gif'
+    content:'/src/assets/model/bandana.gif'
   },
   {
     id:8,
@@ -97,7 +97,7 @@ const pages = ref([
     id:15,
     name:'harmonica',
     shown:false,
-    content:'/src/assets/model/plant-01.gif'
+    content:'/src/assets/model/harmonica.gif'
   },
   {
     id:16,
@@ -118,10 +118,22 @@ const pages = ref([
 
 function handleShowPage(page){
   if(!page.divider){
-    const e = document.getElementById('page'+page.id)
-    e.style.transform= page.shown ? `translateY(${page.id*5}%) perspective(40px) translateZ(0)
-  rotate3d(1,0,0,-0.1deg)` : 'translateY(-70%)';
-    page.shown = !page.shown
+    const all = document.querySelectorAll<HTMLElement>('.page')
+    all.forEach( e =>{
+      let eIdNumber = e.id.split('page')[1]
+      let ePage = pages.value[+eIdNumber];
+
+      if(page.id === +ePage.id){
+        e.style.transform = !page.shown?`translateY(${eIdNumber*5-80}%)`:
+            `translateY(${eIdNumber*5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`;
+        page.shown = !page.shown;
+      }
+      else{
+        e.style.transform =`translateY(${eIdNumber*5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`;
+        ePage.shown = false;
+      }
+
+    })
   }
 }
 
@@ -176,12 +188,16 @@ function handleShowPage(page){
   padding:7px 50px;
   position:absolute;
   cursor: pointer;
+
+  font-size:0.8vw;
+  font-weight: 450;
 }
 .page-divider{
    background-color: black;
  }
 .page-divider>*{
   color: #fffaf1;
+  text-transform: uppercase;
 }
 .page-divider>button{
   cursor: auto;
@@ -320,75 +336,75 @@ function handleShowPage(page){
 /*emplacement des boutons vers les befores*/
 #page0>button{
   top:-33px;
-  left:24vw;
+  left:25vw;
 }
 #page1>button{
   top:-33px;
-  left:34vw;
+  left:34.9vw;
 }
 #page2>button{
   top:-33px;
-  left:24vw;
+  left:24.9vw;
 }
 #page3>button{
   top:-33px;
-  left:14vw;
+  left:13vw;
 }
 #page4>button{
   top:-33px;
-  left:34vw;
+  left:36.1vw;
 }
 #page5>button{
   top:-33px;
-  left:24vw;
+  left:23vw;
 }
 #page6>button{
   top:-33px;
-  left:34vw;
+  left:36.9vw;
 }
 #page7>button{
   top:-33px;
-  left:24vw;
+  left:25.2vw;
 }
 #page8>button{
   top:-33px;
-  left:14vw;
+  left:16vw;
 }
 #page9>button{
   top:-33px;
-  left:4vw;
+  left:3vw;
 }
 #page10>button{
   top:-33px;
-  left:24vw;
+  left:24.8vw;
 }
 #page11>button{
   top:-33px;
-  left:34vw;
+  left:34.7vw;
 }
 #page12>button{
   top:-33px;
-  left:24vw;
+  left:24.7vw;
 }
 #page13>button{
   top:-33px;
-  left:14vw;
+  left:13vw;
 }
 #page14>button{
   top:-33px;
-  left:24vw;
+  left:25.2vw;
 }
 #page15>button{
   top:-33px;
-  left:34vw;
+  left:34.5vw;
 }
 #page16>button{
   top:-33px;
-  left:14vw;
+  left:15.6vw;
 }
 #page17>button{
   top:-33px;
-  left:4vw;
+  left:3vw;
 }
 
 
