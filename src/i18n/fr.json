@@ -34,5 +34,87 @@
   "contact": {
     "header": "Merci beaucoup de me faire des retours sur mon travail !\n      J'ai hâte de savoir ce que vous en avez pensé, et comment je pourrais l'améliorer",
     "email": "Vous pouvez principalement me contacter par email :"
+  },
+  "folder": {
+    "book-001": {
+      "title": "livre-001",
+      "subtitle": "Gustav Klimt",
+      "details": "symbolisme"
+    },
+    "book-002": {
+      "title": "livre-002",
+      "subtitle": "Claude Monet",
+      "details": "impressionnisme"
+    },
+    "book-003": {
+      "title": "livre-003",
+      "subtitle": "Maya Rochat",
+      "details": "photographie - peinture - montage"
+    },
+    "art": {
+      "title": "art"
+    },
+    "human": {
+      "title": "humain",
+      "subtitle": "Vivian",
+      "details": "développeur web"
+    },
+    "body": {
+      "title": "corps"
+    },
+    "agfa": {
+      "title": "agfa",
+      "subtitle": "agfamatic 200 sensor",
+      "details": "appareil photo argentique"
+    },
+    "bandana": {
+      "title": "bandana",
+      "subtitle": "bleu, paisley",
+      "details": "noué autour du coup"
+    },
+    "prince": {
+      "title": "prince",
+      "subtitle": "Le petit prince",
+      "details": "étain"
+    },
+    "objects": {
+      "title": "objets"
+    },
+    "plant-001": {
+      "title": "plante-01",
+      "subtitle": "plante d'intérieur",
+      "details": "pothos"
+    },
+    "plant-002": {
+      "title": "plante-02",
+      "subtitle": "plante d'intérieur",
+      "details": "plante grasse"
+    },
+    "plant-003": {
+      "title": "plante-03",
+      "subtitle": "plante d'intérieur",
+      "details": "aloe vera"
+    },
+    "plants": {
+      "title": "plantes"
+    },
+    "amplifier": {
+      "title": "amplifier",
+      "subtitle": "amplifier",
+      "details": "VOX VT20+"
+    },
+    "harmonica": {
+      "title": "harmonica",
+      "subtitle": "Hohner",
+      "details": "Marine Band (C)"
+    },
+    "strokes": {
+      "title": "strokes",
+      "subtitle": "The Strokes",
+      "details": "Room on fire"
+    },
+    "music": {
+      "title": "musique"
+    }
   }
 }

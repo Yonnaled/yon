@@ -34,5 +34,89 @@
   "contact": {
     "header": "Merci beaucoup de me faire des retours sur mon travail !\n      J'ai hâte de savoir ce que vous en avez pensé, et comment je pourrais l'améliorer",
     "email": "Vous pouvez principalement me contacter par email :"
+  },
+  "folder": {
+    "book-001": {
+      "title": "book-001",
+      "subtitle": "Gustav Klimt",
+      "details": "symbolism"
+    },
+    "book-002": {
+      "title": "book-002",
+      "subtitle": "Claude Monet",
+      "details": "impressionnism"
+    },
+    "book-003": {
+      "title": "book-003",
+      "subtitle": "Maya Rochat",
+      "details": "photography - paint - montage"
+    },
+    "art": {
+      "title": "art"
+    },
+    "human": {
+      "title": "human",
+      "subtitle": "Vivian",
+      "details": "web developer"
+    },
+    "body": {
+      "title": "body"
+    },
+    "agfa": {
+      "title": "agfa",
+      "subtitle": "agfamatic 200 sensor",
+      "details": "film camera"
+    },
+    "bandana": {
+      "title": "bandana",
+      "subtitle": "blue, paisley",
+      "details": "tied around the neck"
+    },
+    "prince": {
+      "title": "prince",
+      "subtitle": "Le little prince",
+      "details": "tin"
+    },
+    "objects": {
+      "title": "objects"
+    },
+    "plant-001": {
+      "title": "plant-01",
+      "subtitle": "indoor plant",
+      "details": "pothos"
+    },
+    "plant-002": {
+      "title": "plant-02",
+      "subtitle": "indoor plant",
+      "details": "succulent"
+    },
+    "plant-003": {
+      "title": "plant-03",
+      "subtitle": "indoor plant",
+      "details": "aloe vera"
+    },
+    "plants": {
+      "title": "plants"
+    },
+    "amplifier": {
+      "title": "amplifier",
+      "subtitle": "amplifier",
+      "details": "VOX VT20+"
+    },
+    "harmonica": {
+      "title": "harmonica",
+      "subtitle": "Hohner",
+      "details": "Marine Band (C)"
+    },
+    "strokes": {
+      "title": "strokes",
+      "subtitle": "The Strokes",
+      "details": "Room on fire"
+    },
+    "music": {
+      "title": "music",
+      "subtitle": "",
+      "details": ""
+    }
   }
 }

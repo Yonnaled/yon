@@ -8,24 +8,18 @@ const pages = ref([
     name:'book-001',
     shown:false,
     content:'/src/assets/model/klimt.gif',
-    subtitle:"Gustav Klimt",
-    details:"symbolisme"
   },
   {
     id:1,
     name:'book-002',
     shown:false,
     content:'/src/assets/model/monet.gif',
-    subtitle:"Claude Monet",
-    details:"impressionnisme"
   },
   {
     id:2,
     name:'book-003',
     shown:false,
     content:'/src/assets/model/rochat.gif',
-    subtitle:"Maya Rochat",
-    details:"photographie - peinture - montage"
   },
   {
     id:3,
@@ -38,8 +32,6 @@ const pages = ref([
     name:'human',
     shown:false,
     content:'/src/assets/model/plant-01.gif',
-    subtitle:"Vivian",
-    details:"web developper"
   },
   {
     id:5,
@@ -52,24 +44,18 @@ const pages = ref([
     name:'agfa',
     shown:false,
     content:'/src/assets/model/agfa.gif',
-    subtitle:"agfamatic 200 sensor",
-    details:"appareil photo argentique"
   },
   {
     id:7,
     name:'bandana',
     shown:false,
     content:'/src/assets/model/bandana.gif',
-    subtitle:"bleu, paisley",
-    details:"noué autour du coup"
   },
   {
     id:8,
     name:'prince',
     shown:false,
     content:'/src/assets/model/agfa.gif',
-    subtitle:"Le petit prince",
-    details:"étain"
   },
   {
     id:9,
@@ -82,24 +68,18 @@ const pages = ref([
     name:'plant-001',
     shown:false,
     content:'/src/assets/model/plant-01.gif',
-    subtitle:"plante d'intérieur",
-    details:"pothos"
   },
   {
     id:11,
     name:'plant-002',
     shown:false,
     content:'/src/assets/model/plant-02.gif',
-    subtitle:"plante d'intérieur",
-    details:"succulent"
   },
   {
     id:12,
     name:'plant-003',
     shown:false,
     content:'/src/assets/model/plant-03.gif',
-    subtitle:"plante d'intérieur",
-    details:"aloe vera"
   },
   {
     id:13,
@@ -112,24 +92,18 @@ const pages = ref([
     name:'amplifier',
     shown:false,
     content:'/src/assets/model/plant-01.gif',
-    subtitle:"amplifier",
-    details:"VOX VT20+"
   },
   {
     id:15,
     name:'harmonica',
     shown:false,
     content:'/src/assets/model/harmonica.gif',
-    subtitle:"Hohner",
-    details:"Marine Band (C)"
   },
   {
     id:16,
     name:'strokes',
     shown:false,
     content:'/src/assets/model/plant-01.gif',
-    subtitle:"The Strokes",
-    details:"Room on fire"
   },
   {
     id:17,
@@ -168,10 +142,10 @@ function handleShowPage(page){
 
 <template>
   <div class="folder">
-    <div v-for="page in pages.reverse()" :id="'page'+page.id" :class="['page',page.divider?'page-divider':'']" :key="page.name">
-      <button @click="handleShowPage(page)" :class="['btn'+page.name,'btnPage']">{{page.name}}</button>
-      <div class="subtitle">{{page.subtitle}}</div>
-      <div class="details">{{page.details}}</div>
+    <div v-for="page in pages" :id="'page'+page.id" :class="['page',page.divider?'page-divider':'']" :key="page.name">
+      <button @click="handleShowPage(page)" :class="['btn'+page.name,'btnPage']">{{ $t("folder." + page.name +".title")}}</button>
+      <div class="subtitle">{{ $t("folder." + page.name +".subtitle")}}</div>
+      <div class="details">{{ $t("folder." + page.name +".details")}}</div>
       <div class="img-container">
         <img :src="page.content" alt="">
       </div>
