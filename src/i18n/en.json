@@ -81,17 +81,17 @@
       "title": "objects"
     },
     "plant-001": {
-      "title": "plant-01",
+      "title": "plant-001",
       "subtitle": "indoor plant",
       "details": "pothos"
     },
     "plant-002": {
-      "title": "plant-02",
+      "title": "plant-002",
       "subtitle": "indoor plant",
       "details": "succulent"
     },
     "plant-003": {
-      "title": "plant-03",
+      "title": "plant-003",
       "subtitle": "indoor plant",
       "details": "aloe vera"
     },
@@ -117,6 +117,7 @@
       "title": "music",
       "subtitle": "",
       "details": ""
-    }
+    },
+    "secret-files": "vivian's secret files"
   }
 }

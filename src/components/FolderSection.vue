@@ -124,7 +124,7 @@ function handleShowPage(page){
       let ePage = pages.value[+eIdNumber];
 
       if(page.id === +ePage.id){
-        e.style.transform = !page.shown?`translateY(${eIdNumber*5-80}%)`:
+        e.style.transform = !page.shown?`translateY(${eIdNumber*5-70}%)`:
             `translateY(${eIdNumber*5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`;
         page.shown = !page.shown;
       }
@@ -150,6 +150,13 @@ function handleShowPage(page){
         <img :src="page.content" alt="">
       </div>
     </div>
+    <div class="drawer-wall"></div>
+    <div class="drawer">
+      <div class="secret-files">
+        {{ $t("folder.secret-files") }}
+      </div>
+    </div>
+    <div class="cover-drawer-invisible"></div>
 
   </div>
 </template>
@@ -159,11 +166,11 @@ function handleShowPage(page){
 <style scoped>
 
 .folder{
-  height: 110vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding-top: 30vh;
 
   background-color: #fffaf1;
 }
@@ -176,6 +183,7 @@ function handleShowPage(page){
   position: absolute;
   border: black 1px solid;
   border-radius: 15px;
+  z-index:2;
 
   transition: .7s cubic-bezier(.3,1.31,.53,.95);
 
@@ -473,7 +481,68 @@ function handleShowPage(page){
   object-fit: cover;
 }
 
+.drawer-wall{
+  width: 51vw;
+  height: 50vh;
+  z-index: 1;
+  border: 1px solid black;
 
+  transform: perspective(40px) translateZ(0) translateY(2%)
+  rotate3d(1,0,0,0.05deg);
+}
+
+.drawer{
+  width: 55vw;
+  height: 15vh;
+  z-index: 9;
+  background-color: #fffaf1;
+  border: 1px solid black;
+
+  transform: perspective(40px) translateZ(0) translateY(-20%)
+  rotate3d(1,0,0,-0.4deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*
+.drawer::after{
+  content:  '';
+  position: absolute;
+  !*border:1px solid black;*!
+  top: -16px;
+  background-color: #fffaf1;
+
+  width: 55vw;
+  height: 100px;
+  clip-path: path('M 6 2 L 1049 2 L 1053 15 L 2 15 Z');
+}
+.drawer::before{
+  content:  '';
+  position: absolute;
+  !*border:1px solid black;*!
+  top: -15px;
+  background-color: black;
+
+  width: 55vw;
+  height: 100px;
+  clip-path: path('M 5 0 L 1050 0 L 1055 15 L 0 15 Z');
+}
+*/
+
+.secret-files{
+  padding:15px;
+  border: 1px solid black;
+  transform: perspective(40px) translateZ(0)
+  rotate3d(1,0,0,-0.8deg);
+}
+.cover-drawer-invisible{
+  width: 60vw;
+  height: 40vh;
+  z-index: 9;
+  background-color: #fffaf1;
+  transform: translateY(-10%);
+}
 
 @media (min-width: 1024px) {
 }
