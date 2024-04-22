@@ -28,7 +28,7 @@
     <a href="/src/assets/pdf/VivianDELANNOY_CV.pdf" download="VivianDELANNOY_CV" class="cv">
       <img src="../assets/img/profile-pic.jpg" alt="">
       <div class="content">
-        <div class="title">curriculum</div>
+        <div class="title bandeins">curriculum</div>
         <div class="name">Vivian DELANNOY</div>
         <div class="dev">Front-end web developer</div>
         <div class="dl-icon">
