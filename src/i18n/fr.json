@@ -117,5 +117,10 @@
       "title": "musique"
     },
     "secret-files": "fichiers secrets de vivian"
+  },
+  "work": {
+    "personal-work":"Projet personnel",
+    "pro-work":"Projet professionnel",
+    "featured-work": "Projets"
   }
 }

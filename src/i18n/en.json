@@ -119,5 +119,10 @@
       "details": ""
     },
     "secret-files": "vivian's secret files"
+  },
+  "work": {
+    "personal-work":"Personal work",
+    "pro-work":"Professional work",
+    "featured-work": "Featured work"
   }
 }

@@ -54,7 +54,7 @@ document.addEventListener("scroll", event => {
 
   .title{
     width: 75%;
-    color: white;
+    color: #fffaf1;
     text-shadow: 1px 1px 2px black ;
 
     position: absolute;
