@@ -8,13 +8,16 @@ document.addEventListener("scroll", event => {
   document.querySelectorAll<HTMLElement>(".scroll-2").forEach(element =>{
     element.style.transform = `translateY(${-window.scrollY/6}px)`
   })
+  document.querySelectorAll<HTMLElement>(".scroll-3").forEach(element =>{
+    element.style.transform = `translateY(${-window.scrollY/2}px)`
+  })
 });
 
 </script>
 
 <template>
   <div class="main">
-    <div class="bg-video">
+    <div class="bg-video scroll-3">
       <video src="../assets/video/bg-logo.mov" autoplay loop muted></video>
     </div>
     <div class="title">
@@ -33,13 +36,18 @@ document.addEventListener("scroll", event => {
     height: 100vh;
     width: 100vw;
     background-color: black;
+    display: flex;
+    justify-content: center;
   }
   .bg-video{
     display: flex;
     justify-content: center;
+    z-index: 0;
+    position: fixed;
   }
   video{
-    height: 100vh;
+    width: 150vw;
+    transform: translateY(-18vw);
   }
 
 
