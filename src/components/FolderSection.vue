@@ -53,9 +53,9 @@ const pages = ref([
   },
   {
     id:8,
-    name:'prince',
+    name:'motherboard',
     shown:false,
-    content:'/src/assets/model/agfa.gif',
+    content:'/src/assets/model/motherboard.gif',
   },
   {
     id:9,
@@ -143,7 +143,9 @@ function handleShowPage(page){
 <template>
   <div class="folder">
     <div v-for="page in pages" :id="'page'+page.id" :class="['page',page.divider?'page-divider':'']" :key="page.name">
-      <button @click="handleShowPage(page)" :class="['btn'+page.name,'btnPage']">{{ $t("folder." + page.name +".title")}}</button>
+      <button @click="handleShowPage(page)" :class="['btn'+page.name,'btnPage',page.divider?'bandeins':'']">
+        {{ $t("folder." + page.name +".title")}}
+      </button>
       <div class="subtitle">{{ $t("folder." + page.name +".subtitle")}}</div>
       <div class="details">{{ $t("folder." + page.name +".details")}}</div>
       <div class="img-container">
@@ -166,7 +168,7 @@ function handleShowPage(page){
 <style scoped>
 
 .folder{
-  height: 200vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -391,7 +393,7 @@ function handleShowPage(page){
 }
 #page8>button{
   top:-33px;
-  left:16vw;
+  left:13.6vw;
 }
 #page9>button{
   top:-33px;

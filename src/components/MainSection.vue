@@ -1,4 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+
+document.addEventListener("scroll", event => {
+  document.querySelectorAll<HTMLElement>(".scroll-1").forEach(element =>{
+    element.style.transform = `translateY(${-window.scrollY/4}px)`
+  })
+  document.querySelectorAll<HTMLElement>(".scroll-2").forEach(element =>{
+    element.style.transform = `translateY(${-window.scrollY/6}px)`
+  })
+});
+
+</script>
 
 <template>
   <div class="main">
@@ -6,10 +18,10 @@
       <video src="../assets/video/bg-logo.mov" autoplay loop muted></video>
     </div>
     <div class="title">
-        <div class="welcome">
+        <div class="welcome bandeins scroll-1">
           {{ $t( "home.welcome") }}
         </div>
-        <div class="st">
+        <div class="st scroll-2">
           {{ $t("home.introduction")}}
         </div>
     </div>
@@ -47,7 +59,7 @@
   }
 
   .welcome{
-    font-size: 6vw;
+    font-size: 5vw;
     text-align: left;
     font-weight: bold;}
 
