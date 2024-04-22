@@ -108,6 +108,9 @@ img{
   align-items: center;
 }
 .finally{
+  padding:2px;
+  /*  color: #fffaf1;
+    background-color: #a90909;*/
   width: 70vw;
   display: flex;
   justify-content: center;
