@@ -48,6 +48,7 @@ document.addEventListener("scroll", event => {
   video{
     width: 150vw;
     transform: translateY(-18vw);
+    filter: brightness(60%);
   }
 
 
