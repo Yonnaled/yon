@@ -60,7 +60,7 @@
   cursor: pointer;
   font-weight: 400;
 
-  width: 20vw;
+  width: 25vw;
 
   transition: ease-in-out all 500ms;
 
