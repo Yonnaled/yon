@@ -84,7 +84,7 @@ a{
   top: 1.5vw;
   position: absolute;
   background-color: #1a1a1a;
-  width: 18vw;
+  width: 20vw;
   height: 7vw;
   box-shadow: 2px 11px 13px rgba(0, 0, 0, .5);
 
@@ -99,7 +99,7 @@ a{
 
 .content{
   width: 100%;
-  padding-left: .8vw;
+  padding-left: 1vw;
   color: #fffaf1;
 }
 .title{
