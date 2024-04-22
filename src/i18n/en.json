@@ -123,6 +123,10 @@
   "work": {
     "personal-work":"Personal work",
     "pro-work":"Professional work",
-    "featured-work": "Featured work"
+    "featured-work": "Featured personal work",
+    "aftermath": "Photography",
+    "blur": "Personal work",
+    "weather": "1st react project",
+    "portfolio": "1st vue project"
   }
 }

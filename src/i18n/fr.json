@@ -121,6 +121,10 @@
   "work": {
     "personal-work":"Projet personnel",
     "pro-work":"Projet professionnel",
-    "featured-work": "Projets"
+    "featured-work": "Projets personnels",
+    "aftermath": "Photographie",
+    "blur": "Projet personnel",
+    "weather": "1er projet react",
+    "portfolio": "er projet vue"
   }
 }

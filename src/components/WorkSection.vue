@@ -1,22 +1,38 @@
 <script setup lang="ts">
 import {ref} from "vue";
 
-const work = ref([
+let work = ref([
   {
     name: 'Aftermath',
-    personal: true,
-    stack:['Angular', 'GSAP']
+    desc: "aftermath",
+    stack:['Angular', 'GSAP', 'Lennis smooth scroll'],
+    showImg: false
   },
   {
-    name: 'Kiabi',
-    personal: false,
-    stack:['Angular', 'SpringBoot', 'PostgreSQL', 'GCP']
+    name: 'Blur',
+    desc: "blur",
+    stack:['Angular'],
+    showImg: false
   },
   {
-    name: 'ACDC',
-    personal: false,
-    stack:['AngularJS', 'Node.js', 'MongoDB', 'Express.js']
+    name: 'Weather',
+    desc: "weather",
+    stack:['React'],
+    showImg: false
+  },
+  {
+    name: 'Portfolio',
+    desc: "portfolio",
+    stack:['Vue.js', 'GSAP', 'Lennis smooth scroll'],
+    showImg: false
   }
+]);
+
+let showImg = ref([
+  work.value[0].showImg,
+  work.value[1].showImg,
+  work.value[2].showImg,
+  work.value[3].showImg,
 ])
 
 </script>
@@ -25,16 +41,30 @@ const work = ref([
   <div class="work">
     <h1>{{ $t("work.featured-work")}}</h1>
     <div class="table">
-      <div class="row" v-for="row in work" :key="row.name">
+      <div class="row" v-for="row in work" :key="row.name"
+           @mouseenter="row.showImg=true" @mouseleave="row.showImg=false">
         <div class="name bandeins">{{ row.name }}</div>
-        <div class="isPersonal">{{ $t( row.personal ? "work.personal-work" : "work.pro-work" ) }}</div>
+        <div class="desc">{{ $t( "work."+row.desc ) }}</div>
         <div class="stack">
           <div class="stack-element" v-for="stack in row.stack" :key="stack">
             {{stack}}
           </div>
         </div>
-
       </div>
+    </div>
+    <div class="illustrations">
+      <Transition>
+        <img  src="../assets/img/aftermath-illu.png" alt="" v-show="work[0].showImg">
+      </Transition>
+      <Transition>
+        <img  src="../assets/img/blur-illu.png" alt="" v-show="work[1].showImg">
+      </Transition>
+      <Transition>
+        <img  src="../assets/img/weather-illu.png" alt="" v-show="work[2].showImg">
+      </Transition>
+      <Transition>
+        <img src="../assets/model/logo.gif" alt="" v-show="work[3].showImg">
+      </Transition>
     </div>
   </div>
 </template>
@@ -65,7 +95,7 @@ h1{
 
 .row{
   width: 86vw;
-  height: 15vh;
+  height: 8vw;
   border-top: 1px solid black;
   display: flex;
   align-items: center;
@@ -86,7 +116,7 @@ h1{
   font-weight: 100;
   width: 40vw;
 }
-.isPersonal{
+.desc{
   width: 10vw;
 }
 
@@ -98,6 +128,25 @@ h1{
 .stack-element{
   padding-left: 1vw;
 }
+
+.illustrations img{
+  position:absolute;
+  width: 24vw;
+  height: 30vw;
+  transform: translate(25vw,-31vw);
+  z-index: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 
 @media (min-width: 1024px) {
 }
