@@ -1,4 +1,3 @@
-@import './base.css';
 
 body {
   width: 100vw;
@@ -11,6 +10,25 @@ body {
 }
 
 
+
+@font-face {
+  font-family: "Studio Feixen";
+  src: url('../assets/font/StudioFeixenSansVFTRIALGX.ttf');
+}
+@font-face {
+  font-family: "Brico";
+  src: url('../assets/font/BricolageGrotesque.ttf');
+}
+@font-face {
+  font-family: "Bandeins";
+  src: url('../assets/font/Bandeins.ttf');
+}
+
+
 *{
-  font-family: "Space Grotesk";
+  font-family: "Studio Feixen";
+}
+.bandeins{
+  font-family: "Bandeins";
+  font-variation-settings: "wdth" 300;
 }

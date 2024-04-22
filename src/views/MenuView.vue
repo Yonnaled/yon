@@ -1,7 +1,9 @@
+<script setup >
+import NavPage from "@/components/NavPage.vue";
+</script>
+
 <template>
-  <div class="menu">
-    <h1>This is a menu page !</h1>
-  </div>
+  <NavPage></NavPage>
 </template>
 
 <style>
