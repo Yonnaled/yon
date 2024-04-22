@@ -6,25 +6,29 @@ let work = ref([
     name: 'Aftermath',
     desc: "aftermath",
     stack:['Angular', 'GSAP', 'Lennis smooth scroll'],
-    showImg: false
+    showImg: false,
+    url:'https://aftermath.yonnaled.com'
   },
   {
     name: 'Blur',
     desc: "blur",
     stack:['Angular'],
-    showImg: false
+    showImg: false,
+    url:'https://blur.yonnaled.com'
   },
   {
     name: 'Weather',
     desc: "weather",
     stack:['React'],
-    showImg: false
+    showImg: false,
+    url:'https://weather.yonnaled.com'
   },
   {
     name: 'Portfolio',
     desc: "portfolio",
     stack:['Vue.js', 'GSAP', 'Lennis smooth scroll'],
-    showImg: false
+    showImg: false,
+    url:''
   }
 ]);
 
@@ -41,8 +45,9 @@ let showImg = ref([
   <div class="work">
     <h1>{{ $t("work.featured-work")}}</h1>
     <div class="table">
-      <div class="row" v-for="row in work" :key="row.name"
-           @mouseenter="row.showImg=true" @mouseleave="row.showImg=false">
+      <a class="row" v-for="row in work" :key="row.name"
+           @mouseenter="row.showImg=true" @mouseleave="row.showImg=false"
+            :href="row.url" target="_blank">
         <div class="name bandeins">{{ row.name }}</div>
         <div class="desc">{{ $t( "work."+row.desc ) }}</div>
         <div class="stack">
@@ -50,7 +55,7 @@ let showImg = ref([
             {{stack}}
           </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="illustrations">
       <Transition>
@@ -94,6 +99,8 @@ h1{
 }
 
 .row{
+  color:black;
+  text-decoration: none;
   width: 86vw;
   height: 8vw;
   border-top: 1px solid black;
@@ -135,6 +142,7 @@ h1{
   height: 30vw;
   transform: translate(25vw,-31vw);
   z-index: 0;
+  cursor: pointer;
 }
 
 .v-enter-active,
