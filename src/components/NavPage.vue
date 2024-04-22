@@ -120,7 +120,7 @@ a{
 
 .dl-icon img{
   width: 1.5vw;
-  transition: ease 500ms;
+  transition: ease-in-out 300ms;
 }
 
 .cv:hover .dl-icon img{
