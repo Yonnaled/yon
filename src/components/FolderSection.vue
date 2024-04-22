@@ -174,7 +174,7 @@ function handleShowPage(page){
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30vh;
+  padding-top: 40vh;
 
   background-color: #fffaf1;
 }
