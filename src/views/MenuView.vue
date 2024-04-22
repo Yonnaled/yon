@@ -6,7 +6,7 @@ import NavPage from "@/components/NavPage.vue";
   <NavPage></NavPage>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
 }
 </style>

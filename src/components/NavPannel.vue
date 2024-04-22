@@ -32,7 +32,7 @@
 
 </template>
 
-<style>
+<style scoped>
 .navPannel{
   height: 100vh;
   border-right: 1px solid hsla(240,3%,58%,.15);

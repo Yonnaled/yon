@@ -128,5 +128,10 @@
     "blur": "Personal work",
     "weather": "1st react project",
     "portfolio": "1st vue project"
+  },
+  "creativity": {
+    "title": "Creativity*",
+    "desc": "As a front-end web developer, I felt the need to express my creativity and not just create tables or forms as we are often used to. Giving myself the freedom to imagine innovative designs that capture users' attention and improve their online experience is much more interesting to me. This need for artistic research and creativity pushes me to stay on the lookout for the latest trends and technologies, which enriches my expertise and allows me to create websites that are both aesthetic and functional.",
+    "finally": " Ultimately, it's the satisfaction of seeing my ideas come to life on the screen that motivates me to constantly cultivate my creativity in my web development work."
   }
 }

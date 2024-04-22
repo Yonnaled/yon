@@ -80,7 +80,7 @@ let showImg = ref([
   width: 100vw;
   z-index: 1;
   position: relative;
-  padding-top: 10vh;
+  padding-top: 5vw;
 }
 
 h1{

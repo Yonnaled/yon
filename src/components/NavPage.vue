@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .navPage{
   width: 100vw;
   height: 100vh;

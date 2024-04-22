@@ -126,5 +126,10 @@
     "blur": "Projet personnel",
     "weather": "1er projet react",
     "portfolio": "1er projet vue"
+  },
+  "creativity": {
+    "title": "Créativité*",
+    "desc": "En tant que développeur web front-end, j'ai ressenti le besoin d'exprimer ma créativité et de ne pas uniquement créer des tableaux ou des formulaires comme on peut souvent en avoir l'habitude. Me donner la liberté d'imaginer des designs innovants qui captivent l'attention des utilisateurs et améliorent leur expérience en ligne est pour moi beaucoup plus intéressant. Ce besoin de recherche artistique et de créativité me pousse à rester à l'affût des dernières tendances et technologies, ce qui enrichit mon expertise et me permet de créer des sites web à la fois esthétiques et fonctionnels.",
+    "finally": "En fin de compte, c'est la satisfaction de voir mes idées prendre vie sur l'écran qui me motive à cultiver constamment ma créativité dans mon travail de développement web."
   }
 }
