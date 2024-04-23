@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import {onMounted} from "vue";
 
+let count = 0;
 onMounted( () => {
   let cursor = document.getElementById("cursor");
-  document.addEventListener("mousemove", function(e) {
-    cursor.style.left = e.clientX + "px",
-        cursor.style.top = e.clientY + "px";
+  document.body.addEventListener("mousemove", function(e) {
+    if (count==3){
+      cursor.style.left = e.clientX + "px",
+          cursor.style.top = e.clientY + "px";
+      count=0;
+    } else {
+      count++
+    }
   });
 })
 
