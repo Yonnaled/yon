@@ -7,28 +7,32 @@ let work = ref([
     desc: "aftermath",
     stack:['Angular', 'GSAP', 'Lennis smooth scroll'],
     showImg: false,
-    url:'https://aftermath.yonnaled.com'
+    url:'https://aftermath.yonnaled.com',
+    img:"/src/assets/img/aftermath-illu.png"
   },
   {
     name: 'Blur',
     desc: "blur",
     stack:['Angular'],
     showImg: false,
-    url:'https://blur.yonnaled.com'
+    url:'https://blur.yonnaled.com',
+    img:"/src/assets/img/blur-illu.png"
   },
   {
     name: 'Weather',
     desc: "weather",
     stack:['React'],
     showImg: false,
-    url:'https://weather.yonnaled.com'
+    url:'https://weather.yonnaled.com',
+    img:"/src/assets/img/weather-illu.png"
   },
   {
     name: 'Portfolio',
     desc: "portfolio",
     stack:['Vue.js', 'GSAP', 'Lennis smooth scroll'],
     showImg: false,
-    url:''
+    url:'',
+    img:"/src/assets/model/logo.gif"
   }
 ]);
 
@@ -48,7 +52,10 @@ let showImg = ref([
       <a class="row" v-for="row in work" :key="row.name"
            @mouseenter="row.showImg=true" @mouseleave="row.showImg=false"
             :href="row.url" target="_blank">
-        <div class="name bandeins">{{ row.name }}</div>
+        <div class="name">{{ row.name }}</div>
+        <Transition>
+          <img :src="row.img" :class="['img'+row.name]" alt="" v-show="row.showImg">
+        </Transition>
         <div class="desc">{{ $t( "work."+row.desc ) }}</div>
         <div class="stack">
           <div class="stack-element" v-for="stack in row.stack" :key="stack">
@@ -57,6 +64,7 @@ let showImg = ref([
         </div>
       </a>
     </div>
+
     <div class="illustrations">
       <Transition>
         <img  src="../assets/img/aftermath-illu.png" alt="" v-show="work[0].showImg">
@@ -108,7 +116,7 @@ h1{
   align-items: center;
   justify-content: space-between;
 
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1.2vw;
   cursor: pointer;
 }
@@ -122,6 +130,7 @@ h1{
   font-size: 2.8vw;
   font-weight: 100;
   width: 40vw;
+  font-family: Bandeins;
 }
 .desc{
   width: 10vw;
@@ -136,14 +145,38 @@ h1{
   padding-left: 1vw;
 }
 
-.illustrations img{
+img{
+  width: 24vw;
+}
+
+.imgAftermath{
+  position: absolute;
+  transform: translate(18vw,12vw);
+}
+.imgBlur{
+  position: absolute;
+  transform: translate(18vw,4vw);
+}
+.imgWeather{
+  position: absolute;
+  transform: translate(18vw,-4vw);
+}
+.imgPortfolio{
+  position: absolute;
+  transform: translate(18vw,-12vw);
+}
+
+.illustrations{
+  display: none;
+}
+
+/*.illustrations img{
   position:absolute;
   width: 24vw;
   height: 30vw;
-  transform: translate(25vw,-31vw);
   z-index: 0;
   cursor: pointer;
-}
+}*/
 
 .v-enter-active,
 .v-leave-active {
