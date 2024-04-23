@@ -1,7 +1,10 @@
+<script setup>
+
+import AboutSection from '../components/AboutSection.vue'
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page {{ $t('welcome') }}</h1>
-  </div>
+  <AboutSection></AboutSection>
 </template>
 
 <style scoped>
