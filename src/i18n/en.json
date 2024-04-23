@@ -32,8 +32,9 @@
     "master": "Master's degree in Computer Science \"E-Services\""
   },
   "contact": {
-    "header": "Merci beaucoup de me faire des retours sur mon travail !\n      J'ai hâte de savoir ce que vous en avez pensé, et comment je pourrais l'améliorer",
-    "email": "Vous pouvez principalement me contacter par email :"
+    "header": "Thank you very much for giving me feedback on my work! I can't wait to hear what you thought of it, and how I could improve it",
+    "email": "You can mainly contact me by email :",
+    "email-label": "email"
   },
   "folder": {
     "book-001": {

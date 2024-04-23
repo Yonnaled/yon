@@ -1,7 +1,9 @@
+<script setup>
+  import ContactSection from "@/components/ContactSection.vue";
+</script>
+
 <template>
-  <div class="contact">
-    <h1>This is an contact page {{ $t('welcome') }}</h1>
-  </div>
+  <ContactSection></ContactSection>
 </template>
 
 <style scoped>

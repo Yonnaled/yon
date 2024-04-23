@@ -33,7 +33,8 @@
   },
   "contact": {
     "header": "Merci beaucoup de me faire des retours sur mon travail !\n      J'ai hâte de savoir ce que vous en avez pensé, et comment je pourrais l'améliorer",
-    "email": "Vous pouvez principalement me contacter par email :"
+    "email": "Vous pouvez principalement me contacter par email :",
+    "email-label": "email"
   },
   "folder": {
     "book-001": {
