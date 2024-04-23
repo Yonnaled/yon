@@ -3,9 +3,9 @@
 <template>
   <div class="navPannel">
       <div class="nav-wrapper">
-        <div class="logo link" routerLink="/">
+        <RouterLink to="/" class="logo link" >
           <img src="../assets/img/logo.png">
-        </div>
+        </RouterLink>
 
         <div class="nav">
           <RouterLink to="/menu">
