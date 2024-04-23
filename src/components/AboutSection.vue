@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import {onMounted} from "vue";
+
+onMounted( () => {
+  let cursor = document.getElementById("cursor");
+  document.addEventListener("mousemove", function(e) {
+    cursor.style.left = e.clientX + "px",
+        cursor.style.top = e.clientY + "px";
+  });
+})
+
+</script>
 
 <template>
   <div class="about">
@@ -8,12 +19,16 @@
         {{$t("about.header")}}
       </div>
     </div>
+
+    <div class="divider bandeins">(1)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t("menu.about") }}</div>
+      <div class="title bandeins">{{ $t("menu.about") }}*</div>
       <div class="desc"> {{ $t("about.about1") }} </div>
     </div>
+
+    <div class="divider bandeins">(2)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t("about.formations") }}</div>
+      <div class="title bandeins">{{ $t("about.formations") }}*</div>
       <div class="desc">
         <div class="master">{{ $t("about.master") }}</div>
         <div class="licence">{{ $t("about.licence") }}</div>
@@ -21,23 +36,28 @@
       </div>
     </div>
   </div>
+  <div class='cursor' id="cursor"></div>
 </template>
 
 <style scoped>
 
 .about{
+  height: 100vh;
+  width: 100vw;
+  background-color: #fffaf1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 .header-wrapper{
-  padding-top: 8vw;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1vw;
 }
 .header{
   padding:2px;
@@ -51,11 +71,16 @@
   text-align: left;
 }
 
+.divider{
+  margin: 4vw 0 2vw;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
 .content{
   display: flex;
   width: 70vw;
   justify-content: space-between;
-  margin-top: 6vw;
 }
 .title{
   display: flex;
@@ -67,6 +92,22 @@
 .desc{
   font-size: 1.4vw;
   width: 50vw;
+}
+
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: 50vw;
+  top: 50vh;
+  mix-blend-mode: difference;
+  background-color: #fffaf1;
+  z-index: 10000;
+  border: 2px solid white;
+  height: 40px;
+  width: 40px;
+  transition: all 300ms ease-out;
 }
 
 </style>
