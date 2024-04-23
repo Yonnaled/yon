@@ -36,6 +36,15 @@
     "email": "You can mainly contact me by email :",
     "email-label": "email"
   },
+  "legal": {
+    "header": "This section aims to inform you about the legal and regulatory aspects regarding the use of this website.",
+    "host-label": "host",
+    "host": "As part of legal compliance, please note that Hostinger is the host of this website, in accordance with article 6, III-1 of the French Law for Confidence in the Digital Economy (LCEN).",
+    "links-label": "external links",
+    "links": "I am not responsible for the legal choices and the content of external sites accessible via hypertext links on this website.",
+    "cookies-label": "cookies & private privacy",
+    "cookies": "No personal data is collected or processed on this website, in accordance with respect for privacy and the provisions of the General Data Protection Regulation (GDPR). Additionally, no cookies are used on this site."
+  },
   "folder": {
     "book-001": {
       "title": "book-001",

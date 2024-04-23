@@ -1,7 +1,8 @@
+<script setup>
+import LegalSection from "../components/LegalSection.vue"
+</script>
 <template>
-  <div class="legal">
-    <h1>This is an legal page {{ $t('welcome') }}</h1>
-  </div>
+  <LegalSection></LegalSection>
 </template>
 
 <style scoped>

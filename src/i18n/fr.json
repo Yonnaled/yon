@@ -36,6 +36,15 @@
     "email": "Vous pouvez principalement me contacter par email :",
     "email-label": "email"
   },
+  "legal": {
+    "header": "Cette section vise à vous informer sur les aspects juridiques et réglementaires concernant l'utilisation de ce site web.",
+    "host-label": "hébergement",
+    "host": "Dans le cadre de la conformité légale, veuillez noter que Hostinger est l'hébergeur du présent site web, conformément à l'article 6, III-1 de la Loi pour la confiance dans l'économie numérique (LCEN).",
+    "links-label": "liens externes",
+    "links": "Je ne suis pas responsable quant aux choix légaux et au contenu des sites externes accessibles via des liens hypertextes présents sur ce site web.",
+    "cookies-label": "cookies et confidentialité",
+    "cookies": "Aucune donnée personnelle est collectée ou traitée sur ce site web, conformément au respect de la vie privée et aux dispositions du Règlement Général sur la Protection des Données (RGPD). De plus, aucun cookie n'est utilisé sur ce site."
+  },
   "folder": {
     "book-001": {
       "title": "livre-001",
