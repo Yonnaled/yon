@@ -1,65 +1,70 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from 'vue'
 
 let work = ref([
   {
     name: 'Aftermath',
-    desc: "aftermath",
-    stack:['Angular', 'GSAP', 'Lennis smooth scroll'],
+    desc: 'aftermath',
+    stack: ['Angular', 'GSAP', 'Lennis smooth scroll'],
     showImg: false,
-    url:'https://aftermath.yonnaled.com',
-    img:"/src/assets/img/aftermath-illu.png"
+    url: 'https://aftermath.yonnaled.com',
+    img: '/src/assets/img/aftermath-illu.png'
   },
   {
     name: 'Blur',
-    desc: "blur",
-    stack:['Angular'],
+    desc: 'blur',
+    stack: ['Angular'],
     showImg: false,
-    url:'https://blur.yonnaled.com',
-    img:"/src/assets/img/blur-illu.png"
+    url: 'https://blur.yonnaled.com',
+    img: '/src/assets/img/blur-illu.png'
   },
   {
     name: 'Weather',
-    desc: "weather",
-    stack:['React'],
+    desc: 'weather',
+    stack: ['React'],
     showImg: false,
-    url:'https://weather.yonnaled.com',
-    img:"/src/assets/img/weather-illu.png"
+    url: 'https://weather.yonnaled.com',
+    img: '/src/assets/img/weather-illu.png'
   },
   {
     name: 'Portfolio',
-    desc: "portfolio",
-    stack:['Vue.js', 'GSAP', 'Lennis smooth scroll'],
+    desc: 'portfolio',
+    stack: ['Vue.js', 'GSAP', 'Lennis smooth scroll'],
     showImg: false,
-    url:'',
-    img:"/src/assets/model/logo.gif"
+    url: '',
+    img: '/src/assets/model/logo.gif'
   }
-]);
+])
 
 let showImg = ref([
   work.value[0].showImg,
   work.value[1].showImg,
   work.value[2].showImg,
-  work.value[3].showImg,
+  work.value[3].showImg
 ])
-
 </script>
 
 <template>
   <div class="work">
-    <h1>{{ $t("work.featured-work")}}</h1>
+    <h1>{{ $t('work.featured-work') }}</h1>
     <div class="table">
-      <a class="row" v-for="row in work" :key="row.name"
-           @mouseenter="row.showImg=true" @mouseleave="row.showImg=false"
-            :href="row.url" target="_blank">
+      <a
+        class="row"
+        v-for="row in work"
+        :key="row.name"
+        @mouseenter="row.showImg = true"
+        @mouseleave="row.showImg = false"
+        :href="row.url"
+        target="_blank"
+      >
         <div class="name">{{ row.name }}</div>
         <Transition>
-          <img :src="row.img" :class="['img'+row.name]" alt="" v-show="row.showImg">
+          <img :src="row.img" :class="['img' + row.name]" alt="" v-show="row.showImg" />
         </Transition>
-        <div class="desc">{{ $t( "work."+row.desc ) }}</div>
+        <div class="desc">{{ $t('work.' + row.desc) }}</div>
         <div class="stack">
           <div class="stack-element" v-for="stack in row.stack" :key="stack">
-            {{stack}}
+            {{ stack }}
           </div>
         </div>
       </a>
@@ -67,23 +72,23 @@ let showImg = ref([
 
     <div class="illustrations">
       <Transition>
-        <img  src="../assets/img/aftermath-illu.png" alt="" v-show="work[0].showImg">
+        <img src="../assets/img/aftermath-illu.png" alt="" v-show="work[0].showImg" />
       </Transition>
       <Transition>
-        <img  src="../assets/img/blur-illu.png" alt="" v-show="work[1].showImg">
+        <img src="../assets/img/blur-illu.png" alt="" v-show="work[1].showImg" />
       </Transition>
       <Transition>
-        <img  src="../assets/img/weather-illu.png" alt="" v-show="work[2].showImg">
+        <img src="../assets/img/weather-illu.png" alt="" v-show="work[2].showImg" />
       </Transition>
       <Transition>
-        <img src="../assets/model/logo.gif" alt="" v-show="work[3].showImg">
+        <img src="../assets/model/logo.gif" alt="" v-show="work[3].showImg" />
       </Transition>
     </div>
   </div>
 </template>
 
 <style scoped>
-.work{
+.work {
   background-color: #fffaf1;
   width: 100vw;
   z-index: 1;
@@ -91,14 +96,14 @@ let showImg = ref([
   padding-top: 5vw;
 }
 
-h1{
+h1 {
   margin-left: 7vw;
   margin-bottom: 0.5vw;
   font-weight: 200;
   font-size: 1.2vw;
 }
 
-.table{
+.table {
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -106,8 +111,8 @@ h1{
   align-items: center;
 }
 
-.row{
-  color:black;
+.row {
+  color: black;
   text-decoration: none;
   width: 86vw;
   height: 8vw;
@@ -121,52 +126,52 @@ h1{
   cursor: pointer;
 }
 
-.row:hover > .bandeins{
-  font-variation-settings: "wdth" 100 !important;
+.row:hover > .bandeins {
+  font-variation-settings: 'wdth' 100 !important;
 }
 
-.name{
+.name {
   transition: ease-in-out all 500ms;
   font-size: 2.8vw;
   font-weight: 100;
   width: 40vw;
   font-family: Bandeins;
 }
-.desc{
+.desc {
   width: 10vw;
 }
 
-.stack{
+.stack {
   width: 25vw;
   display: flex;
   justify-content: flex-start;
 }
-.stack-element{
+.stack-element {
   padding-left: 1vw;
 }
 
-img{
+img {
   width: 24vw;
 }
 
-.imgAftermath{
+.imgAftermath {
   position: absolute;
-  transform: translate(18vw,12vw);
+  transform: translate(18vw, 12vw);
 }
-.imgBlur{
+.imgBlur {
   position: absolute;
-  transform: translate(18vw,4vw);
+  transform: translate(18vw, 4vw);
 }
-.imgWeather{
+.imgWeather {
   position: absolute;
-  transform: translate(18vw,-4vw);
+  transform: translate(18vw, -4vw);
 }
-.imgPortfolio{
+.imgPortfolio {
   position: absolute;
-  transform: translate(18vw,-12vw);
+  transform: translate(18vw, -12vw);
 }
 
-.illustrations{
+.illustrations {
   display: none;
 }
 
@@ -187,7 +192,6 @@ img{
 .v-leave-to {
   opacity: 0;
 }
-
 
 @media (min-width: 1024px) {
 }

@@ -1,48 +1,44 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="navPage ">
+  <div class="navPage">
     <div class="pageLink home">
       <RouterLink class="bandeins" to="/">
-        {{$t('menu.home')}}
+        {{ $t('menu.home') }}
       </RouterLink>
     </div>
     <div class="pageLink about">
       <RouterLink class="bandeins" to="/about">
-        {{$t('menu.about')}}
+        {{ $t('menu.about') }}
       </RouterLink>
     </div>
     <div class="pageLink legal">
       <RouterLink class="bandeins" to="/legal">
-        {{$t('menu.legal')}}
+        {{ $t('menu.legal') }}
       </RouterLink>
     </div>
     <div class="pageLink contact">
       <RouterLink class="bandeins" to="/contact">
-        {{$t('menu.contact')}}
+        {{ $t('menu.contact') }}
       </RouterLink>
     </div>
 
-
     <a href="/src/assets/pdf/VivianDELANNOY_CV.pdf" download="VivianDELANNOY_CV" class="cv">
-      <img src="../assets/img/profile-pic.jpg" alt="">
+      <img src="../assets/img/profile-pic.jpg" alt="" />
       <div class="content">
         <div class="title bandeins">curriculum</div>
         <div class="name">Vivian DELANNOY</div>
         <div class="dev">Front-end web developer</div>
         <div class="dl-icon">
-          <img src="../assets/icon/download.png" alt="">
+          <img src="../assets/icon/download.png" alt="" />
         </div>
       </div>
     </a>
-
-
   </div>
 </template>
 
 <style scoped>
-.navPage{
+.navPage {
   width: 100vw;
   height: 100vh;
   background-color: #fffaf1;
@@ -52,7 +48,7 @@
   justify-content: center;
 }
 
-.pageLink{
+.pageLink {
   margin-left: 40vw;
 
   text-transform: uppercase;
@@ -64,19 +60,19 @@
 
   transition: ease-in-out all 500ms;
 
-  font-family: "Bandeins";
+  font-family: 'Bandeins';
 }
-a{
+a {
   transition: ease-in-out all 500ms;
-  color:black;
+  color: black;
   text-decoration: none;
 }
-.pageLink:hover a{
-  font-variation-settings: "wdth" 100 !important;
+.pageLink:hover a {
+  font-variation-settings: 'wdth' 100 !important;
   font-weight: 500;
 }
 
-.cv{
+.cv {
   cursor: pointer;
   border-radius: 18px;
   padding: 16px;
@@ -86,45 +82,44 @@ a{
   background-color: #1a1a1a;
   width: 20vw;
   height: 7vw;
-  box-shadow: 2px 11px 13px rgba(0, 0, 0, .5);
+  box-shadow: 2px 11px 13px rgba(0, 0, 0, 0.5);
 
   display: flex;
   justify-content: space-between;
 }
 
-.cv img{
+.cv img {
   height: 100%;
   border-radius: 10px;
 }
 
-.content{
+.content {
   width: 100%;
   padding-left: 1vw;
   color: #fffaf1;
 }
-.title{
+.title {
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 1vw;
 }
-.name{
-  padding-bottom: .2vw;
+.name {
+  padding-bottom: 0.2vw;
 }
-.dev{
+.dev {
   padding-bottom: 1vw;
 }
-.dl-icon{
+.dl-icon {
   display: flex;
   justify-content: center;
 }
 
-.dl-icon img{
+.dl-icon img {
   width: 1.5vw;
   transition: ease-in-out 300ms;
 }
 
-.cv:hover .dl-icon img{
-  transform: translateY(.2vw);
+.cv:hover .dl-icon img {
+  transform: translateY(0.2vw);
 }
-
 </style>

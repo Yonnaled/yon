@@ -5,46 +5,44 @@
     <div class="scrolling-text">
       <div class="text">
         <span>Web design</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
         <span>Responsive & animated</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
         <span>Visual creativity</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
         <span>Smoothness & precision</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
       </div>
       <div class="text">
         <span>Web design</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
         <span>Responsive & animated</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
         <span>Visual creativity</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
         <span>Smoothness & precision</span>
-        <img src="../assets/model/logo.gif" alt="">
+        <img src="../assets/model/logo.gif" alt="" />
       </div>
     </div>
 
-
-
     <div class="content">
-      <div class="title bandeins">{{ $t("creativity.title") }}</div>
-      <div class="desc"> {{ $t("creativity.desc") }} </div>
+      <div class="title bandeins">{{ $t('creativity.title') }}</div>
+      <div class="desc">{{ $t('creativity.desc') }}</div>
     </div>
 
     <div class="finally-wrapper">
       <div class="finally">
-        {{$t("creativity.finally")}}
+        {{ $t('creativity.finally') }}
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.creativity{
-  padding-top:7vw;
+.creativity {
+  padding-top: 7vw;
   background-color: #fffaf1;
-  position:relative;
+  position: relative;
 }
 
 .scrolling-text {
@@ -61,20 +59,20 @@
   animation: animate_text 60s linear infinite;
 }
 
-.scrolling-text:hover{
+.scrolling-text:hover {
   transform: translateX(-1vw);
 }
-.scrolling-text:hover>*{
+.scrolling-text:hover > * {
   animation-play-state: paused;
 }
 
 .text span {
-  font-variation-settings: "wdth" 300;
-  font-family: "Bandeins";
+  font-variation-settings: 'wdth' 300;
+  font-family: 'Bandeins';
   margin: 0 1vw;
 }
 
-img{
+img {
   height: 4vw;
 }
 
@@ -87,14 +85,13 @@ img{
   }
 }
 
-
-.content{
+.content {
   display: flex;
   width: 100vw;
   justify-content: space-around;
   margin-top: 7vw;
 }
-.title{
+.title {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -102,21 +99,20 @@ img{
   font-size: 1.6vw;
   width: 30vw;
 }
-.desc{
+.desc {
   font-size: 1.4vw;
   width: 50vw;
 }
 
-
-.finally-wrapper{
+.finally-wrapper {
   padding-top: 4vw;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.finally{
-  padding:2px;
+.finally {
+  padding: 2px;
   /*  color: #fffaf1;
     background-color: #a90909;*/
   width: 70vw;
@@ -127,5 +123,4 @@ img{
 
   text-align: center;
 }
-
 </style>

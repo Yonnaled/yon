@@ -1,13 +1,13 @@
 {
-  "menu" : {
-    "home" : "Accueil",
+  "menu": {
+    "home": "Accueil",
     "about": "A propos",
     "legal": "legal",
     "contact": "contact"
   },
   "home": {
     "welcome": "BIENVENUE SUR WebYon!",
-    "introduction" : "Je suis Vivian, un développeur web qui veut partager ses expériences, et qui travaille sur du web design & UI/UX !"
+    "introduction": "Je suis Vivian, un développeur web qui veut partager ses expériences, et qui travaille sur du web design & UI/UX !"
   },
   "more": {
     "skate": {
@@ -28,7 +28,7 @@
     "about2": "Ce site fait office de portfolio de mes expériences, compétences front-end, mais est avant tout un\n      challenge que je me suis lancé. Le tout premier site que j'ai imaginé et développé.",
     "formations": "Formations",
     "bac": "Bac S Sciences de l'Ingénieur",
-    "licence":  "Licence Informatique",
+    "licence": "Licence Informatique",
     "master": "Master Informatique E-Services"
   },
   "contact": {
@@ -129,8 +129,8 @@
     "secret-files": "fichiers secrets de vivian"
   },
   "work": {
-    "personal-work":"Projet personnel",
-    "pro-work":"Projet professionnel",
+    "personal-work": "Projet personnel",
+    "pro-work": "Projet professionnel",
     "featured-work": "Projets personnels",
     "aftermath": "Photographie",
     "blur": "Projet personnel",

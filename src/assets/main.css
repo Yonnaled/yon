@@ -1,34 +1,30 @@
-
 body {
   width: 100vw;
   overflow-x: hidden;
-  margin : 0;
+  margin: 0;
 }
 
 #app {
-  margin: 0 ;
+  margin: 0;
 }
 
-
-
 @font-face {
-  font-family: "Studio Feixen";
+  font-family: 'Studio Feixen';
   src: url('../assets/font/StudioFeixenSansVFTRIALGX.ttf');
 }
 @font-face {
-  font-family: "Brico";
+  font-family: 'Brico';
   src: url('../assets/font/BricolageGrotesque.ttf');
 }
 @font-face {
-  font-family: "Bandeins";
+  font-family: 'Bandeins';
   src: url('../assets/font/Bandeins.ttf');
 }
 
-
-*{
-  font-family: "Studio Feixen";
+* {
+  font-family: 'Studio Feixen';
 }
-.bandeins{
-  font-family: "Bandeins";
-  font-variation-settings: "wdth" 300;
+.bandeins {
+  font-family: 'Bandeins';
+  font-variation-settings: 'wdth' 300;
 }

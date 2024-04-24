@@ -1,5 +1,5 @@
-<script setup >
-import NavPage from "@/components/NavPage.vue";
+<script setup>
+import NavPage from '@/components/NavPage.vue'
 </script>
 
 <template>

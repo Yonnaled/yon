@@ -1,173 +1,170 @@
 <script setup lang="ts">
-import {ref} from "vue";
-
+import { ref } from 'vue'
 
 const pages = ref([
   {
-    id:0,
-    name:'book-001',
-    shown:false,
-    content:'/src/assets/model/klimt.gif',
+    id: 0,
+    name: 'book-001',
+    shown: false,
+    content: '/src/assets/model/klimt.gif'
   },
   {
-    id:1,
-    name:'book-002',
-    shown:false,
-    content:'/src/assets/model/monet.gif',
+    id: 1,
+    name: 'book-002',
+    shown: false,
+    content: '/src/assets/model/monet.gif'
   },
   {
-    id:2,
-    name:'book-003',
-    shown:false,
-    content:'/src/assets/model/rochat.gif',
+    id: 2,
+    name: 'book-003',
+    shown: false,
+    content: '/src/assets/model/rochat.gif'
   },
   {
-    id:3,
-    name:'art',
-    shown:false,
-    divider:true
+    id: 3,
+    name: 'art',
+    shown: false,
+    divider: true
   },
   {
-    id:4,
-    name:'human',
-    shown:false,
-    content:'/src/assets/model/plant-01.gif',
+    id: 4,
+    name: 'human',
+    shown: false,
+    content: '/src/assets/model/plant-01.gif'
   },
   {
-    id:5,
-    name:'body',
-    shown:false,
-    divider:true
+    id: 5,
+    name: 'body',
+    shown: false,
+    divider: true
   },
   {
-    id:6,
-    name:'agfa',
-    shown:false,
-    content:'/src/assets/model/agfa.gif',
+    id: 6,
+    name: 'agfa',
+    shown: false,
+    content: '/src/assets/model/agfa.gif'
   },
   {
-    id:7,
-    name:'bandana',
-    shown:false,
-    content:'/src/assets/model/bandana.gif',
+    id: 7,
+    name: 'bandana',
+    shown: false,
+    content: '/src/assets/model/bandana.gif'
   },
   {
-    id:8,
-    name:'motherboard',
-    shown:false,
-    content:'/src/assets/model/motherboard.gif',
+    id: 8,
+    name: 'motherboard',
+    shown: false,
+    content: '/src/assets/model/motherboard.gif'
   },
   {
-    id:9,
-    name:'objects',
-    shown:false,
-    divider:true
+    id: 9,
+    name: 'objects',
+    shown: false,
+    divider: true
   },
   {
-    id:10,
-    name:'plant-001',
-    shown:false,
-    content:'/src/assets/model/plant-01.gif',
+    id: 10,
+    name: 'plant-001',
+    shown: false,
+    content: '/src/assets/model/plant-01.gif'
   },
   {
-    id:11,
-    name:'plant-002',
-    shown:false,
-    content:'/src/assets/model/plant-02.gif',
+    id: 11,
+    name: 'plant-002',
+    shown: false,
+    content: '/src/assets/model/plant-02.gif'
   },
   {
-    id:12,
-    name:'plant-003',
-    shown:false,
-    content:'/src/assets/model/plant-03.gif',
+    id: 12,
+    name: 'plant-003',
+    shown: false,
+    content: '/src/assets/model/plant-03.gif'
   },
   {
-    id:13,
-    name:'plants',
-    shown:false,
-    divider:true,
+    id: 13,
+    name: 'plants',
+    shown: false,
+    divider: true
   },
   {
-    id:14,
-    name:'amplifier',
-    shown:false,
-    content:'/src/assets/model/plant-01.gif',
+    id: 14,
+    name: 'amplifier',
+    shown: false,
+    content: '/src/assets/model/plant-01.gif'
   },
   {
-    id:15,
-    name:'harmonica',
-    shown:false,
-    content:'/src/assets/model/harmonica.gif',
+    id: 15,
+    name: 'harmonica',
+    shown: false,
+    content: '/src/assets/model/harmonica.gif'
   },
   {
-    id:16,
-    name:'strokes',
-    shown:false,
-    content:'/src/assets/model/plant-01.gif',
+    id: 16,
+    name: 'strokes',
+    shown: false,
+    content: '/src/assets/model/plant-01.gif'
   },
   {
-    id:17,
-    name:'music',
-    shown:false,
-    divider:true
-  },
-]);
+    id: 17,
+    name: 'music',
+    shown: false,
+    divider: true
+  }
+])
 
-
-
-
-function handleShowPage(page){
-  if(!page.divider){
+function handleShowPage(page) {
+  if (!page.divider) {
     const all = document.querySelectorAll<HTMLElement>('.page')
-    all.forEach( e =>{
+    all.forEach((e) => {
       let eIdNumber = e.id.split('page')[1]
-      let ePage = pages.value[+eIdNumber];
+      let ePage = pages.value[+eIdNumber]
 
-      if(page.id === +ePage.id){
-        e.style.transform = !page.shown?`translateY(${eIdNumber*5-70}%)`:
-            `translateY(${eIdNumber*5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`;
-        page.shown = !page.shown;
+      if (page.id === +ePage.id) {
+        e.style.transform = !page.shown
+          ? `translateY(${eIdNumber * 5 - 70}%)`
+          : `translateY(${eIdNumber * 5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`
+        page.shown = !page.shown
+      } else {
+        e.style.transform = `translateY(${eIdNumber * 5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`
+        ePage.shown = false
       }
-      else{
-        e.style.transform =`translateY(${eIdNumber*5}%) perspective(40px) translateZ(0) rotate3d(1,0,0,-0.1deg)`;
-        ePage.shown = false;
-      }
-
     })
   }
 }
-
-
 </script>
 
 <template>
   <div class="folder">
-    <div v-for="page in pages" :id="'page'+page.id" :class="['page',page.divider?'page-divider':'']" :key="page.name">
-      <button @click="handleShowPage(page)" :class="['btn'+page.name,'btnPage',page.divider?'bandeins':'']">
-        {{ $t("folder." + page.name +".title")}}
+    <div
+      v-for="page in pages"
+      :id="'page' + page.id"
+      :class="['page', page.divider ? 'page-divider' : '']"
+      :key="page.name"
+    >
+      <button
+        @click="handleShowPage(page)"
+        :class="['btn' + page.name, 'btnPage', page.divider ? 'bandeins' : '']"
+      >
+        {{ $t('folder.' + page.name + '.title') }}
       </button>
-      <div class="subtitle">{{ $t("folder." + page.name +".subtitle")}}</div>
-      <div class="details">{{ $t("folder." + page.name +".details")}}</div>
+      <div class="subtitle">{{ $t('folder.' + page.name + '.subtitle') }}</div>
+      <div class="details">{{ $t('folder.' + page.name + '.details') }}</div>
       <div class="img-container">
-        <img :src="page.content" alt="">
+        <img :src="page.content" alt="" />
       </div>
     </div>
     <div class="drawer-wall"></div>
     <div class="drawer">
       <div class="secret-files">
-        {{ $t("folder.secret-files") }}
+        {{ $t('folder.secret-files') }}
       </div>
     </div>
     <div class="cover-drawer-invisible"></div>
-
   </div>
 </template>
 
-
-
 <style scoped>
-
-.folder{
+.folder {
   position: relative;
   z-index: 1;
   height: 100vh;
@@ -179,7 +176,7 @@ function handleShowPage(page){
   background-color: #fffaf1;
 }
 
-.page{
+.page {
   height: 50vh;
   width: 50vw;
   background-color: #fffaf1;
@@ -187,256 +184,254 @@ function handleShowPage(page){
   position: absolute;
   border: black 1px solid;
   border-radius: 15px;
-  z-index:2;
+  z-index: 2;
 
-  transition: .7s cubic-bezier(.3,1.31,.53,.95);
+  transition: 0.7s cubic-bezier(0.3, 1.31, 0.53, 0.95);
 
-  transform: perspective(40px) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+  transform: perspective(40px) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
 
-.page>button{
+.page > button {
   margin-top: 5px;
   margin-left: 10px;
   background-color: transparent;
   border: none;
-  z-index:3;
-  padding:7px 50px;
-  position:absolute;
+  z-index: 3;
+  padding: 7px 50px;
+  position: absolute;
   cursor: pointer;
 
-  font-size:0.8vw;
+  font-size: 0.8vw;
   font-weight: 450;
 }
-.page-divider{
-   background-color: black;
- }
-.page-divider>*{
+.page-divider {
+  background-color: black;
+}
+.page-divider > * {
   color: #fffaf1;
   text-transform: uppercase;
 }
-.page-divider>button{
+.page-divider > button {
   cursor: auto;
 }
 
-.subtitle{
+.subtitle {
   font-weight: 500;
-  margin:1.5vw 2vw 0
+  margin: 1.5vw 2vw 0;
 }
-.details{
+.details {
   font-weight: 450;
   margin-left: 2vw;
   color: #c5c5c5;
 }
 
-
-.shownPage{
-  transform:  translateY(-40%);
+.shownPage {
+  transform: translateY(-40%);
 }
 
 /*décalage des pages*/
-#page1{
-  transform: perspective(40px) translateY(5%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page1 {
+  transform: perspective(40px) translateY(5%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page2{
-  transform: perspective(40px) translateY(10%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page2 {
+  transform: perspective(40px) translateY(10%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page3{
-  transform: perspective(40px) translateY(15%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page3 {
+  transform: perspective(40px) translateY(15%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page4{
-  transform: perspective(40px) translateY(20%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page4 {
+  transform: perspective(40px) translateY(20%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page5{
-  transform: perspective(40px) translateY(25%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page5 {
+  transform: perspective(40px) translateY(25%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page6{
-  transform: perspective(40px) translateY(30%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page6 {
+  transform: perspective(40px) translateY(30%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page7{
-  transform: perspective(40px) translateY(35%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page7 {
+  transform: perspective(40px) translateY(35%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page8{
-  transform: perspective(40px) translateY(40%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page8 {
+  transform: perspective(40px) translateY(40%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page9{
-  transform: perspective(40px) translateY(45%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page9 {
+  transform: perspective(40px) translateY(45%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page10{
-  transform: perspective(40px) translateY(50%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page10 {
+  transform: perspective(40px) translateY(50%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page11{
-  transform: perspective(40px) translateY(55%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page11 {
+  transform: perspective(40px) translateY(55%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page12{
-  transform: perspective(40px) translateY(60%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page12 {
+  transform: perspective(40px) translateY(60%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page13{
-  transform: perspective(40px) translateY(65%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page13 {
+  transform: perspective(40px) translateY(65%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page14{
-  transform: perspective(40px) translateY(70%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page14 {
+  transform: perspective(40px) translateY(70%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page15{
-  transform: perspective(40px) translateY(75%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page15 {
+  transform: perspective(40px) translateY(75%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page16{
-  transform: perspective(40px) translateY(80%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page16 {
+  transform: perspective(40px) translateY(80%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
-#page17{
-  transform: perspective(40px) translateY(85%) translateZ(0)
-  rotate3d(1,0,0,-0.1deg);
+#page17 {
+  transform: perspective(40px) translateY(85%) translateZ(0) rotate3d(1, 0, 0, -0.1deg);
 }
 
 /*emplacement before sur page*/
-#page0::before, #page0::after {
-  left:25vw;
-}
-#page1::before, #page1::after {
-  left:35vw;
-}
-#page2::before, #page2::after {
-  left:25vw;
-}
-#page3::before, #page3::after {
-  left:15vw;
-}
-#page4::before, #page4::after {
-  left:35vw;
-}
-#page5::before, #page5::after {
-  left:25vw;
-}
-#page6::before, #page6::after {
-  left: 35vw;
-}
-#page7::before, #page7::after {
+#page0::before,
+#page0::after {
   left: 25vw;
 }
-#page8::before, #page8::after {
+#page1::before,
+#page1::after {
+  left: 35vw;
+}
+#page2::before,
+#page2::after {
+  left: 25vw;
+}
+#page3::before,
+#page3::after {
   left: 15vw;
 }
-#page9::before, #page9::after {
+#page4::before,
+#page4::after {
+  left: 35vw;
+}
+#page5::before,
+#page5::after {
+  left: 25vw;
+}
+#page6::before,
+#page6::after {
+  left: 35vw;
+}
+#page7::before,
+#page7::after {
+  left: 25vw;
+}
+#page8::before,
+#page8::after {
+  left: 15vw;
+}
+#page9::before,
+#page9::after {
   left: 5vw;
 }
-#page10::before, #page10::after {
+#page10::before,
+#page10::after {
   left: 25vw;
 }
-#page11::before, #page11::after {
+#page11::before,
+#page11::after {
   left: 35vw;
 }
-#page12::before, #page12::after {
+#page12::before,
+#page12::after {
   left: 25vw;
 }
-#page13::before, #page13::after {
+#page13::before,
+#page13::after {
   left: 15vw;
 }
-#page14::before, #page14::after {
+#page14::before,
+#page14::after {
   left: 25vw;
 }
-#page15::before, #page15::after {
+#page15::before,
+#page15::after {
   left: 35vw;
 }
-#page16::before, #page16::after {
+#page16::before,
+#page16::after {
   left: 15vw;
 }
-#page17::before, #page17::after {
+#page17::before,
+#page17::after {
   left: 5vw;
 }
 
 /*emplacement des boutons vers les befores*/
-#page0>button{
-  top:-33px;
-  left:25vw;
+#page0 > button {
+  top: -33px;
+  left: 25vw;
 }
-#page1>button{
-  top:-33px;
-  left:34.9vw;
+#page1 > button {
+  top: -33px;
+  left: 34.9vw;
 }
-#page2>button{
-  top:-33px;
-  left:24.9vw;
+#page2 > button {
+  top: -33px;
+  left: 24.9vw;
 }
-#page3>button{
-  top:-33px;
-  left:13vw;
+#page3 > button {
+  top: -33px;
+  left: 13vw;
 }
-#page4>button{
-  top:-33px;
-  left:36.1vw;
+#page4 > button {
+  top: -33px;
+  left: 36.1vw;
 }
-#page5>button{
-  top:-33px;
-  left:23vw;
+#page5 > button {
+  top: -33px;
+  left: 23vw;
 }
-#page6>button{
-  top:-33px;
-  left:36.9vw;
+#page6 > button {
+  top: -33px;
+  left: 36.9vw;
 }
-#page7>button{
-  top:-33px;
-  left:25.2vw;
+#page7 > button {
+  top: -33px;
+  left: 25.2vw;
 }
-#page8>button{
-  top:-33px;
-  left:13.6vw;
+#page8 > button {
+  top: -33px;
+  left: 13.6vw;
 }
-#page9>button{
-  top:-33px;
-  left:3vw;
+#page9 > button {
+  top: -33px;
+  left: 3vw;
 }
-#page10>button{
-  top:-33px;
-  left:24.8vw;
+#page10 > button {
+  top: -33px;
+  left: 24.8vw;
 }
-#page11>button{
-  top:-33px;
-  left:34.7vw;
+#page11 > button {
+  top: -33px;
+  left: 34.7vw;
 }
-#page12>button{
-  top:-33px;
-  left:24.7vw;
+#page12 > button {
+  top: -33px;
+  left: 24.7vw;
 }
-#page13>button{
-  top:-33px;
-  left:13vw;
+#page13 > button {
+  top: -33px;
+  left: 13vw;
 }
-#page14>button{
-  top:-33px;
-  left:25.2vw;
+#page14 > button {
+  top: -33px;
+  left: 25.2vw;
 }
-#page15>button{
-  top:-33px;
-  left:34.5vw;
+#page15 > button {
+  top: -33px;
+  left: 34.5vw;
 }
-#page16>button{
-  top:-33px;
-  left:15.6vw;
+#page16 > button {
+  top: -33px;
+  left: 15.6vw;
 }
-#page17>button{
-  top:-33px;
-  left:3vw;
+#page17 > button {
+  top: -33px;
+  left: 3vw;
 }
 
-
-.page::before{
-  content:  '';
+.page::before {
+  content: '';
   position: absolute;
   /*border:1px solid black;*/
   top: -27px;
@@ -450,11 +445,11 @@ function handleShowPage(page){
 
   z-index: 2;
 }
-.page-divider::before{
+.page-divider::before {
   background: black;
 }
-.page::after{
-  content:  '';
+.page::after {
+  content: '';
   position: absolute;
   /*border:1px solid black;*/
   top: -28px;
@@ -466,44 +461,39 @@ function handleShowPage(page){
   /*clip-path: path('M 0 25 C 10 25 7 0 17 0 T 130 0 C 140 0 137 25 147 25 L 0 25 Z');*/
   clip-path: path('M 0 28 C 10 28 7 0 17 0 T 130 0 C 140 0 137 28 147 28 L 0 28 Z');
 }
-.page-divider::after{
+.page-divider::after {
   background: #fffaf1;
 }
 
-
-
 /*3d models*/
-.img-container{
+.img-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.page>.img-container> img {
-
-  margin:auto;
+.page > .img-container > img {
+  margin: auto;
   max-height: 30vh;
   object-fit: cover;
 }
 
-.drawer-wall{
+.drawer-wall {
   width: 51vw;
   height: 50vh;
   z-index: 1;
   border: 1px solid black;
 
-  transform: perspective(40px) translateZ(0) translateY(2%)
-  rotate3d(1,0,0,0.05deg);
+  transform: perspective(40px) translateZ(0) translateY(2%) rotate3d(1, 0, 0, 0.05deg);
 }
 
-.drawer{
+.drawer {
   width: 55vw;
   height: 15vh;
   z-index: 9;
   background-color: #fffaf1;
   border: 1px solid black;
 
-  transform: perspective(40px) translateZ(0) translateY(-20%)
-  rotate3d(1,0,0,-0.4deg);
+  transform: perspective(40px) translateZ(0) translateY(-20%) rotate3d(1, 0, 0, -0.4deg);
 
   display: flex;
   align-items: center;
@@ -534,13 +524,12 @@ function handleShowPage(page){
 }
 */
 
-.secret-files{
-  padding:15px;
+.secret-files {
+  padding: 15px;
   border: 1px solid black;
-  transform: perspective(40px) translateZ(0)
-  rotate3d(1,0,0,-0.8deg);
+  transform: perspective(40px) translateZ(0) rotate3d(1, 0, 0, -0.8deg);
 }
-.cover-drawer-invisible{
+.cover-drawer-invisible {
   width: 60vw;
   height: 40vh;
   z-index: 9;

@@ -1,5 +1,5 @@
 <script setup>
-import LegalSection from "../components/LegalSection.vue"
+import LegalSection from '../components/LegalSection.vue'
 </script>
 <template>
   <LegalSection></LegalSection>
