@@ -52,12 +52,20 @@
   overflow: hidden;
   display: flex;
   white-space: nowrap;
+  transition: 500ms ease-out;
 }
 
 .text {
   font-size: 6vw;
   font-weight: 10;
   animation: animate_text 60s linear infinite;
+}
+
+.scrolling-text:hover{
+  transform: translateX(-1vw);
+}
+.scrolling-text:hover>*{
+  animation-play-state: paused;
 }
 
 .text span {
