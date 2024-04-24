@@ -5,23 +5,23 @@
     <div class="scrolling-text">
       <div class="text">
         <span>Web design</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="yon-gif" src="../assets/model/logo.gif" alt="" />
         <span>Responsive & animated</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="earth-gif" src="../assets/model/earth.gif" alt="" />
         <span>Visual creativity</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="yon-gif" src="../assets/model/logo.gif" alt="" />
         <span>Smoothness & precision</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="earth-gif" src="../assets/model/earth.gif" alt="" />
       </div>
       <div class="text">
         <span>Web design</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="yon-gif" src="../assets/model/logo.gif" alt="" />
         <span>Responsive & animated</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="earth-gif" src="../assets/model/earth.gif" alt="" />
         <span>Visual creativity</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="yon-gif" src="../assets/model/logo.gif" alt="" />
         <span>Smoothness & precision</span>
-        <img src="../assets/model/logo.gif" alt="" />
+        <img class="earth-gif" src="../assets/model/earth.gif" alt="" />
       </div>
     </div>
 
@@ -69,11 +69,19 @@
 .text span {
   font-variation-settings: 'wdth' 300;
   font-family: 'Bandeins';
-  margin: 0 1vw;
+  margin: 0 2vw;
 }
 
 img {
-  height: 4vw;
+  height: 5vw;
+}
+.yon-gif {
+  transform: translateY(0.7vw);
+}
+.earth-gif {
+  filter: grayscale(100%);
+  height: 3vw;
+  padding-bottom: 0.4vw;
 }
 
 @keyframes animate_text {
