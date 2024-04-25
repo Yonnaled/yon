@@ -18,12 +18,12 @@ document.addEventListener('scroll', (event) => {
       <video src="../assets/video/bg-logo.mov" autoplay loop muted></video>
     </div>
     <div class="title">
-      <div class="welcome scroll-1">
+      <div class="welcome scroll-3">
         <div class="feixen">{{ $t('home.welcome') }}</div>
         <div class="webyon">{{ $t('home.webyon') }}!</div>
 
       </div>
-      <div class="brico st scroll-2">
+      <div class="brico st scroll-3">
         {{ $t('home.introduction') }}
       </div>
     </div>
@@ -55,7 +55,7 @@ video {
   color: #fffaf1;
   text-shadow: 1px 1px 2px black;
 
-  position: absolute;
+  position: fixed;
   top: 35%;
   left: 50%;
 
@@ -70,6 +70,9 @@ video {
   font-size: 5vw;
   text-align: left;
   font-weight: bold;
+}
+.feixen{
+  font-variation-settings: 'wght' 600, 'wdth' 125;
 }
 .webyon{
   padding-left: 1.4vw;

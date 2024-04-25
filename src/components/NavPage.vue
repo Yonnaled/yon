@@ -56,7 +56,7 @@
   cursor: pointer;
   font-weight: 400;
 
-  width: 25vw;
+  width: 28vw;
 
   font-family: 'feixen';
 }
