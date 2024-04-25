@@ -26,12 +26,12 @@
     </div>
 
     <div class="content">
-      <div class="title bandeins">{{ $t('creativity.title') }}</div>
+      <div class="title brico">{{ $t('creativity.title') }}</div>
       <div class="desc">{{ $t('creativity.desc') }}</div>
     </div>
 
     <div class="finally-wrapper">
-      <div class="finally">
+      <div class="finally brico">
         {{ $t('creativity.finally') }}
       </div>
     </div>
@@ -67,8 +67,8 @@
 }
 
 .text span {
-  font-variation-settings: 'wdth' 300;
-  font-family: 'Bandeins';
+  font-family: Brico;
+  font-weight: 300;
   margin: 0 2vw;
 }
 
@@ -127,7 +127,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8vw;
+  font-size: 1.4vw;
 
   text-align: center;
 }

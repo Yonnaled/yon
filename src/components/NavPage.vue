@@ -3,22 +3,22 @@
 <template>
   <div class="navPage">
     <div class="pageLink home">
-      <RouterLink class="bandeins" to="/">
+      <RouterLink class="feixen" to="/">
         {{ $t('menu.home') }}
       </RouterLink>
     </div>
     <div class="pageLink about">
-      <RouterLink class="bandeins" to="/about">
+      <RouterLink class="feixen" to="/about">
         {{ $t('menu.about') }}
       </RouterLink>
     </div>
     <div class="pageLink legal">
-      <RouterLink class="bandeins" to="/legal">
+      <RouterLink class="feixen" to="/legal">
         {{ $t('menu.legal') }}
       </RouterLink>
     </div>
     <div class="pageLink contact">
-      <RouterLink class="bandeins" to="/contact">
+      <RouterLink class="feixen" to="/contact">
         {{ $t('menu.contact') }}
       </RouterLink>
     </div>
@@ -26,7 +26,7 @@
     <a href="/src/assets/pdf/VivianDELANNOY_CV.pdf" download="VivianDELANNOY_CV" class="cv">
       <img src="../assets/img/profile-pic.jpg" alt="" />
       <div class="content">
-        <div class="title bandeins">curriculum</div>
+        <div class="title feixen">curriculum</div>
         <div class="name">Vivian DELANNOY</div>
         <div class="dev">Front-end web developer</div>
         <div class="dl-icon">
@@ -58,9 +58,7 @@
 
   width: 25vw;
 
-  transition: ease-in-out all 500ms;
-
-  font-family: 'Bandeins';
+  font-family: 'feixen';
 }
 a {
   transition: ease-in-out all 500ms;
@@ -68,7 +66,7 @@ a {
   text-decoration: none;
 }
 .pageLink:hover a {
-  font-variation-settings: 'wdth' 100 !important;
+  font-variation-settings: "wght" 600, "wdth" 100 !important;
   font-weight: 500;
 }
 

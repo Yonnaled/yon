@@ -18,26 +18,26 @@ onMounted(() => {
 <template>
   <div class="legal">
     <div class="header-wrapper">
-      <div class="header">
+      <div class="header brico">
         {{ $t('legal.header') }}
       </div>
     </div>
 
-    <div class="divider bandeins">(1)</div>
+    <div class="divider brico">(1)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t('legal.links-label') }}*</div>
+      <div class="title brico">{{ $t('legal.links-label') }}*</div>
       <div class="desc">{{ $t('legal.links') }}</div>
     </div>
 
-    <div class="divider bandeins">(2)</div>
+    <div class="divider brico">(2)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t('legal.host-label') }}*</div>
+      <div class="title brico">{{ $t('legal.host-label') }}*</div>
       <div class="desc">{{ $t('legal.host') }}</div>
     </div>
 
-    <div class="divider bandeins">(3)</div>
+    <div class="divider brico">(3)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t('legal.cookies-label') }}*</div>
+      <div class="title brico">{{ $t('legal.cookies-label') }}*</div>
       <div class="desc">{{ $t('legal.cookies') }}</div>
     </div>
   </div>

@@ -143,7 +143,7 @@ function handleShowPage(page) {
     >
       <button
         @click="handleShowPage(page)"
-        :class="['btn' + page.name, 'btnPage', page.divider ? 'bandeins' : '']"
+        :class="['btn' + page.name, 'btnPage', page.divider ? 'feixein-short' : 'brico']"
       >
         {{ $t('folder.' + page.name + '.title') }}
       </button>

@@ -8,23 +8,29 @@ body {
   margin: 0;
 }
 
+
 @font-face {
-  font-family: 'Studio Feixen';
-  src: url('../assets/font/StudioFeixenSansVFTRIALGX.ttf');
+  font-family: 'feixen';
+  src: url('../assets/font/studio-feixen-sans-variable.woff2')  format("woff2-variations");
 }
+
 @font-face {
   font-family: 'Brico';
   src: url('../assets/font/BricolageGrotesque.ttf');
 }
-@font-face {
-  font-family: 'Bandeins';
-  src: url('../assets/font/Bandeins.ttf');
-}
 
 * {
-  font-family: 'Studio Feixen';
+  font-family: feixen;
 }
-.bandeins {
-  font-family: 'Bandeins';
-  font-variation-settings: 'wdth' 300;
+.feixen {
+  font-family: feixen;
+  font-variation-settings: "wght" 500, "wdth" 125;
+}
+.feixein-short{
+  font-family: feixen;
+  font-variation-settings: "wght" 500, "wdth" 115;
+}
+
+.brico{
+  font-family: Brico;
 }

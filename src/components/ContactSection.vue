@@ -18,13 +18,13 @@ onMounted(() => {
 <template>
   <div class="contact">
     <div class="header-wrapper">
-      <div class="header">
+      <div class="header brico">
         {{ $t('contact.header') }}
       </div>
     </div>
 
     <div class="content">
-      <div class="title bandeins">{{ $t('contact.email-label') }}*</div>
+      <div class="title brico">{{ $t('contact.email-label') }}*</div>
       <div class="desc">
         <div class="desc-label">{{ $t('contact.email') }}</div>
         <div class="email">

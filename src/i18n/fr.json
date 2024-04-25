@@ -6,7 +6,8 @@
     "contact": "contact"
   },
   "home": {
-    "welcome": "BIENVENUE SUR WebYon!",
+    "welcome": "BIENVENUE SUR",
+    "webyon": "WebYon",
     "introduction": "Je suis Vivian, un développeur web qui veut partager ses expériences, et qui travaille sur du web design & UI/UX !"
   },
   "more": {

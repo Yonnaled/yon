@@ -18,10 +18,12 @@ document.addEventListener('scroll', (event) => {
       <video src="../assets/video/bg-logo.mov" autoplay loop muted></video>
     </div>
     <div class="title">
-      <div class="welcome bandeins scroll-1">
-        {{ $t('home.welcome') }}
+      <div class="welcome scroll-1">
+        <div class="feixen">{{ $t('home.welcome') }}</div>
+        <div class="webyon">{{ $t('home.webyon') }}!</div>
+
       </div>
-      <div class="st scroll-2">
+      <div class="brico st scroll-2">
         {{ $t('home.introduction') }}
       </div>
     </div>
@@ -64,9 +66,15 @@ video {
 }
 
 .welcome {
+  display: flex;
   font-size: 5vw;
   text-align: left;
   font-weight: bold;
+}
+.webyon{
+  padding-left: 1.4vw;
+  font-weight: 500;
+  font-feature-settings: normal;
 }
 
 .st {

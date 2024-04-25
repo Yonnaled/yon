@@ -18,20 +18,20 @@ onMounted(() => {
 <template>
   <div class="about">
     <div class="header-wrapper">
-      <div class="header">
+      <div class="header brico">
         {{ $t('about.header') }}
       </div>
     </div>
 
-    <div class="divider bandeins">(1)</div>
+    <div class="divider brico">(1)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t('menu.about') }}*</div>
+      <div class="title brico">{{ $t('menu.about') }}*</div>
       <div class="desc">{{ $t('about.about1') }}</div>
     </div>
 
-    <div class="divider bandeins">(2)</div>
+    <div class="divider brico">(2)</div>
     <div class="content">
-      <div class="title bandeins">{{ $t('about.formations') }}*</div>
+      <div class="title brico">{{ $t('about.formations') }}*</div>
       <div class="desc">
         <div class="master">{{ $t('about.master') }}</div>
         <div class="licence">{{ $t('about.licence') }}</div>

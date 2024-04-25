@@ -126,16 +126,16 @@ h1 {
   cursor: pointer;
 }
 
-.row:hover > .bandeins {
+.row:hover > .brico {
   font-variation-settings: 'wdth' 100 !important;
 }
 
 .name {
   transition: ease-in-out all 500ms;
   font-size: 2.8vw;
-  font-weight: 100;
+  font-weight: 300;
   width: 40vw;
-  font-family: Bandeins;
+  font-family: Brico;
 }
 .desc {
   width: 10vw;
