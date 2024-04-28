@@ -6,6 +6,20 @@ document.addEventListener('scroll', () => {
     })
   }
 })
+
+// for resizing window on mobile browser
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+let resized=false;
+window.addEventListener('resize', () => {
+  if(!resized){
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    resized=true;
+  }
+});
+
+
 </script>
 
 <template>
@@ -90,6 +104,7 @@ video {
 @media only screen and (max-width: 600px) {
   .main{
     width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
   }
   .bg-video{
@@ -111,7 +126,7 @@ video {
 
   .title{
     top: 60vh;
-    width: 90vw;
+    width: 95vw;
     max-width: 100vw;
     transform: translateX(-50%);
     position: relative;
