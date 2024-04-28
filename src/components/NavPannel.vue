@@ -128,4 +128,10 @@
 .secondMenu {
   transform: translateY(-98%);
 }
+
+@media only screen and (max-width: 600px){
+  .navPannel{
+    display: none !important;
+  }
+}
 </style>
