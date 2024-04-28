@@ -134,7 +134,9 @@ img {
 
 @media only screen and (max-width: 600px){
   .creativity{
-    padding: 20vw 0;
+    color:#fffaf1;
+    background-color: #131313;
+    padding: 20vw 0 30vw;
   }
   .text{
     font-size:12vw;

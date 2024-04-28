@@ -188,8 +188,8 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .work{
-
+  .table{
+    padding-bottom: 20vw;
   }
   h1 {
     /*font-size: 5vw;
@@ -203,6 +203,9 @@ img {
     border-bottom: 1px solid black;
     display: block;
     height: auto;
+  }
+  .table>.row:nth-last-child(1){
+    border-bottom: 0px;
   }
   .name{
     font-size: 12vw;
