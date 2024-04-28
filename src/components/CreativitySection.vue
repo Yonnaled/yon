@@ -131,4 +131,46 @@ img {
 
   text-align: center;
 }
+
+@media only screen and (max-width: 600px){
+  .creativity{
+    padding: 20vw 0;
+  }
+  .text{
+    font-size:12vw;
+    animation: animate_text 30s linear infinite;
+  }
+  .text span {
+   margin: 0 4vw;
+ }
+  .scrolling-text:hover > * {
+    animation-play-state: unset;
+  }
+  img{
+    height: 10vw;
+  }
+  .earth-gif{
+    height: 6vw;
+  }
+
+  .content{
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  .title{
+    font-size: 8vw;
+    width: 90vw;
+    padding-bottom: 10vw;
+  }
+  .desc{
+    width: 90vw;
+    font-size: 5vw;
+  }
+  .finally{
+    text-align: left;
+    width: 90vw;
+    font-size: 6vw;
+  }
+}
 </style>
