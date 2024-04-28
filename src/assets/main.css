@@ -8,10 +8,9 @@ body {
   margin: 0;
 }
 
-
 @font-face {
   font-family: 'feixen';
-  src: url('../assets/font/studio-feixen-sans-variable.woff2')  format("woff2-variations");
+  src: url('../assets/font/studio-feixen-sans-variable.woff2') format('woff2-variations');
 }
 
 @font-face {
@@ -24,13 +23,17 @@ body {
 }
 .feixen {
   font-family: feixen;
-  font-variation-settings: "wght" 500, "wdth" 125;
+  font-variation-settings:
+    'wght' 500,
+    'wdth' 125;
 }
-.feixen-short{
+.feixen-short {
   font-family: feixen;
-  font-variation-settings: "wght" 500, "wdth" 115;
+  font-variation-settings:
+    'wght' 500,
+    'wdth' 115;
 }
 
-.brico{
+.brico {
   font-family: Brico;
 }

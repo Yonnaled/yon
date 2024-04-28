@@ -21,7 +21,6 @@ document.addEventListener('scroll', (event) => {
       <div class="welcome scroll-3">
         <div class="feixen">{{ $t('home.welcome') }}</div>
         <div class="webyon">{{ $t('home.webyon') }}!</div>
-
       </div>
       <div class="brico st scroll-3">
         {{ $t('home.introduction') }}
@@ -71,10 +70,12 @@ video {
   text-align: left;
   font-weight: bold;
 }
-.feixen{
-  font-variation-settings: 'wght' 600, 'wdth' 125;
+.feixen {
+  font-variation-settings:
+    'wght' 600,
+    'wdth' 125;
 }
-.webyon{
+.webyon {
   padding-left: 1.4vw;
   font-weight: 500;
   font-feature-settings: normal;

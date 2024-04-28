@@ -66,7 +66,9 @@ a {
   text-decoration: none;
 }
 .pageLink:hover a {
-  font-variation-settings: "wght" 600, "wdth" 100 !important;
+  font-variation-settings:
+    'wght' 600,
+    'wdth' 100 !important;
   font-weight: 500;
 }
 
