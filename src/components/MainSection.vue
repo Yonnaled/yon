@@ -1,14 +1,10 @@
 <script setup lang="ts">
-document.addEventListener('scroll', (event) => {
-  document.querySelectorAll<HTMLElement>('.scroll-1').forEach((element) => {
-    element.style.transform = `translateY(${-window.scrollY / 4}px)`
-  })
-  document.querySelectorAll<HTMLElement>('.scroll-2').forEach((element) => {
-    element.style.transform = `translateY(${-window.scrollY / 6}px)`
-  })
-  document.querySelectorAll<HTMLElement>('.scroll-3').forEach((element) => {
-    element.style.transform = `translateY(${-window.scrollY / 2}px)`
-  })
+document.addEventListener('scroll', () => {
+  if(!window.matchMedia("(max-width: 700px)").matches){
+    document.querySelectorAll<HTMLElement>('.scroll-3').forEach((element) => {
+      element.style.transform = `translateY(${-window.scrollY / 2}px)`
+    })
+  }
 })
 </script>
 
@@ -114,11 +110,11 @@ video {
   }
 
   .title{
-    top: auto;
     top: 60vh;
     width: 90vw;
     max-width: 100vw;
     transform: translateX(-50%);
+    position: relative;
   }
   .welcome{
     font-size: 7vw;
