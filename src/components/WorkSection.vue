@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 let work = ref([
   {
     name: 'Aftermath',
@@ -64,7 +68,7 @@ const getImageUrl = (name) => {
       >
         <div class="name">{{ row.name }}</div>
         <Transition>
-          <img :src="getImageUrl(row.img)" :class="['img' + row.name]" alt="" v-show="row.showImg" />
+          <img :src="getImageUrl(row.img)" :class="['img' + row.name]" alt="" v-show="row.showImg || isMobile" />
         </Transition>
         <div class="desc">{{ $t('work.' + row.desc) }}</div>
         <div class="stack">
@@ -183,6 +187,45 @@ img {
   opacity: 0;
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width: 600px) {
+  .work{
+
+  }
+  h1 {
+    /*font-size: 5vw;
+    text-decoration: underline;
+    text-underline-offset: 1.2vw;
+    text-decoration-thickness: 1px;*/
+    display: none;
+  }
+  .row{
+    border-top:none;
+    border-bottom: 1px solid black;
+    display: block;
+    height: auto;
+  }
+  .name{
+    font-size: 12vw;
+    padding-top: 4vw;
+  }
+  .desc{
+    font-size:4vw;
+    width: auto;
+    padding-top: 2vw;
+  }
+  .stack{
+    font-size:4vw;
+    width: auto;
+    padding-bottom: 2vw;
+  }
+  .stack-element{
+    padding: 0 2vw 0 0;
+  }
+  img{
+    position: relative !important;
+    transform: none !important;
+    width: 100%;
+    padding-top:1vw
+  }
 }
 </style>
