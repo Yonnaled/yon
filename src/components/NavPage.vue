@@ -122,4 +122,23 @@ a {
 .cv:hover .dl-icon img {
   transform: translateY(0.2vw);
 }
+
+
+@media only screen and (max-width: 600px){
+  .navPage{
+    width: 100%;
+    height: available;
+    align-items: center;
+    overflow: hidden;
+  }
+  .pageLink{
+    font-size: 10vw;
+    margin:0;
+    width: 42vw;
+    text-align: left;
+  }
+  .cv{
+    display: none;
+  }
+}
 </style>
