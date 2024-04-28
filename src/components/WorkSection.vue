@@ -74,21 +74,6 @@ const getImageUrl = (name) => {
         </div>
       </a>
     </div>
-
-    <div class="illustrations">
-      <Transition>
-        <img src="../assets/img/aftermath-illu.png" alt="" v-show="work[0].showImg" />
-      </Transition>
-      <Transition>
-        <img src="../assets/img/blur-illu.png" alt="" v-show="work[1].showImg" />
-      </Transition>
-      <Transition>
-        <img src="../assets/img/weather-illu.png" alt="" v-show="work[2].showImg" />
-      </Transition>
-      <Transition>
-        <img src="../assets/model/logo.gif" alt="" v-show="work[3].showImg" />
-      </Transition>
-    </div>
   </div>
 </template>
 
