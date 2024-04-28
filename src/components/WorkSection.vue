@@ -8,7 +8,7 @@ let work = ref([
     stack: ['Angular', 'GSAP', 'Lennis smooth scroll'],
     showImg: false,
     url: 'https://aftermath.yonnaled.com',
-    img: '/src/assets/img/aftermath-illu.png'
+    img: 'img/aftermath-illu.png'
   },
   {
     name: 'Blur',
@@ -16,7 +16,7 @@ let work = ref([
     stack: ['Angular'],
     showImg: false,
     url: 'https://blur.yonnaled.com',
-    img: '/src/assets/img/blur-illu.png'
+    img: 'img/blur-illu.png'
   },
   {
     name: 'Weather',
@@ -24,7 +24,7 @@ let work = ref([
     stack: ['React'],
     showImg: false,
     url: 'https://weather.yonnaled.com',
-    img: '/src/assets/img/weather-illu.png'
+    img: 'img/weather-illu.png'
   },
   {
     name: 'Portfolio',
@@ -32,7 +32,7 @@ let work = ref([
     stack: ['Vue.js', 'GSAP', 'Lennis smooth scroll'],
     showImg: false,
     url: '',
-    img: '/src/assets/model/logo.gif'
+    img: 'model/logo.gif'
   }
 ])
 
@@ -42,6 +42,11 @@ let showImg = ref([
   work.value[2].showImg,
   work.value[3].showImg
 ])
+
+
+const getImageUrl = (name) => {
+  return new URL(`../assets/${name}`, import.meta.url).href
+}
 </script>
 
 <template>
@@ -59,7 +64,7 @@ let showImg = ref([
       >
         <div class="name">{{ row.name }}</div>
         <Transition>
-          <img :src="row.img" :class="['img' + row.name]" alt="" v-show="row.showImg" />
+          <img :src="getImageUrl(row.img)" :class="['img' + row.name]" alt="" v-show="row.showImg" />
         </Transition>
         <div class="desc">{{ $t('work.' + row.desc) }}</div>
         <div class="stack">

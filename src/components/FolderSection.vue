@@ -6,19 +6,19 @@ const pages = ref([
     id: 0,
     name: 'book-001',
     shown: false,
-    content: '/src/assets/model/klimt.gif'
+    content: 'model/klimt.gif'
   },
   {
     id: 1,
     name: 'book-002',
     shown: false,
-    content: '/src/assets/model/monet.gif'
+    content: 'model/monet.gif'
   },
   {
     id: 2,
     name: 'book-003',
     shown: false,
-    content: '/src/assets/model/rochat.gif'
+    content: 'model/rochat.gif'
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const pages = ref([
     id: 4,
     name: 'human',
     shown: false,
-    content: '/src/assets/model/plant-01.gif'
+    content: 'model/plant-01.gif'
   },
   {
     id: 5,
@@ -42,19 +42,19 @@ const pages = ref([
     id: 6,
     name: 'agfa',
     shown: false,
-    content: '/src/assets/model/agfa.gif'
+    content: 'model/agfa.gif'
   },
   {
     id: 7,
     name: 'bandana',
     shown: false,
-    content: '/src/assets/model/bandana.gif'
+    content: 'model/bandana.gif'
   },
   {
     id: 8,
     name: 'motherboard',
     shown: false,
-    content: '/src/assets/model/motherboard.gif'
+    content: 'model/motherboard.gif'
   },
   {
     id: 9,
@@ -66,19 +66,19 @@ const pages = ref([
     id: 10,
     name: 'plant-001',
     shown: false,
-    content: '/src/assets/model/plant-01.gif'
+    content: 'model/plant-01.gif'
   },
   {
     id: 11,
     name: 'plant-002',
     shown: false,
-    content: '/src/assets/model/plant-02.gif'
+    content: 'model/plant-02.gif'
   },
   {
     id: 12,
     name: 'plant-003',
     shown: false,
-    content: '/src/assets/model/plant-03.gif'
+    content: 'model/plant-03.gif'
   },
   {
     id: 13,
@@ -90,19 +90,19 @@ const pages = ref([
     id: 14,
     name: 'amplifier',
     shown: false,
-    content: '/src/assets/model/plant-01.gif'
+    content: 'model/plant-01.gif'
   },
   {
     id: 15,
     name: 'harmonica',
     shown: false,
-    content: '/src/assets/model/harmonica.gif'
+    content: 'model/harmonica.gif'
   },
   {
     id: 16,
     name: 'strokes',
     shown: false,
-    content: '/src/assets/model/plant-01.gif'
+    content: 'model/plant-01.gif'
   },
   {
     id: 17,
@@ -131,6 +131,10 @@ function handleShowPage(page) {
     })
   }
 }
+
+const getImageUrl = (name) => {
+  return new URL(`../assets/${name}`, import.meta.url).href
+}
 </script>
 
 <template>
@@ -150,7 +154,7 @@ function handleShowPage(page) {
       <div class="subtitle">{{ $t('folder.' + page.name + '.subtitle') }}</div>
       <div class="details">{{ $t('folder.' + page.name + '.details') }}</div>
       <div class="img-container">
-        <img :src="page.content" alt="" />
+        <img :src="getImageUrl(page.content)" alt="" />
       </div>
     </div>
     <div class="drawer-wall"></div>
