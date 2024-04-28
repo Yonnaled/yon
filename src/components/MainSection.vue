@@ -15,7 +15,8 @@ document.addEventListener('scroll', (event) => {
 <template>
   <div class="main">
     <div class="bg-video scroll-3">
-      <video src="../assets/video/bg-logo.mov" autoplay loop muted></video>
+      <video class="video" src="../assets/video/bg-logo.mov" playsinline autoplay loop muted></video>
+      <video class="video-mobile" src="../assets/video/bg-logo-mobile.mp4" playsinline autoplay loop muted></video>
     </div>
     <div class="title">
       <div class="welcome scroll-3">
@@ -47,6 +48,9 @@ video {
   width: 150vw;
   transform: translateY(-18vw);
   filter: brightness(60%);
+}
+.video-mobile{
+  display: none;
 }
 
 .title {
@@ -87,6 +91,50 @@ video {
   margin-left: 18%;
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width: 600px) {
+  .main{
+    width: 100vw;
+    overflow: hidden;
+  }
+  .bg-video{
+    overflow: hidden;
+    width: 100vw;
+  }
+  .video-mobile{
+    display: block;
+  }
+  .video{
+    display: none;
+  }
+  video{
+    height: 100vh;
+    filter: brightness(60%);
+    transform: translateY(-10vh);
+    max-width: 100vw;
+  }
+
+  .title{
+    top: auto;
+    top: 60vh;
+    width: 90vw;
+    max-width: 100vw;
+    transform: translateX(-50%);
+  }
+  .welcome{
+    font-size: 7vw;
+  }
+  .feixen{
+    font-variation-settings: 'wght' 700, 'wdth' 125 !important;
+    padding-bottom: 2vh;
+  }
+  .webyon{
+    font-variation-settings: 'wght' 600 !important;
+    width: 90vw;
+  }
+  .st{
+    width: 95%;
+    font-size: 5vw;
+    margin-left: 0;
+  }
 }
 </style>

@@ -541,6 +541,9 @@ const getImageUrl = (name) => {
   transform: translateY(-10%);
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width: 600px) {
+  .folder{
+    overflow: hidden;
+  }
 }
 </style>
