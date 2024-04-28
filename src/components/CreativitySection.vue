@@ -40,7 +40,7 @@
 
 <style scoped>
 .creativity {
-  padding-top: 7vw;
+  padding-top: 10vw;
   background-color: #fffaf1;
   position: relative;
 }
@@ -97,7 +97,7 @@ img {
   display: flex;
   width: 100vw;
   justify-content: space-around;
-  margin-top: 7vw;
+  margin-top: 12vw;
 }
 .title {
   display: flex;

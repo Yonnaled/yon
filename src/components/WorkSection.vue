@@ -93,7 +93,7 @@ let showImg = ref([
   width: 100vw;
   z-index: 1;
   position: relative;
-  padding-top: 5vw;
+  padding-top: 10vw;
 }
 
 h1 {
