@@ -112,11 +112,11 @@ const pages = ref([
   }
 ])
 
-function handleShowPage(page) {
+function handleShowPage(page:any) {
   if (!page.divider) {
     const all = document.querySelectorAll<HTMLElement>('.page')
     all.forEach((e) => {
-      let eIdNumber = e.id.split('page')[1]
+      let eIdNumber:number = +e.id.split('page')[1]
       let ePage = pages.value[+eIdNumber]
 
       if (page.id === +ePage.id) {
@@ -132,7 +132,7 @@ function handleShowPage(page) {
   }
 }
 
-const getImageUrl = (name) => {
+const getImageUrl = (name:string | undefined) => {
   return new URL(`../assets/${name}`, import.meta.url).href
 }
 </script>

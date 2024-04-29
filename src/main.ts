@@ -11,7 +11,7 @@ import FR from './i18n/fr.json'
 import Lenis from '@studio-freight/lenis'
 
 const lenis = new Lenis()
-function raf(time) {
+function raf(time:any) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }

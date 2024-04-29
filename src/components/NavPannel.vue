@@ -16,11 +16,11 @@ onMounted(() => {
     if (isMobileDevice()) {
       if (window.scrollY >= window.innerHeight) {
         if (alreadyTransparent) {
-          navPannel.style.backgroundColor = '#fffaf1'
+          navPannel!.style.backgroundColor = '#fffaf1'
           alreadyTransparent = false
         }
       } else if (!alreadyTransparent) {
-        navPannel.style.backgroundColor = ''
+        navPannel!.style.backgroundColor = ''
         alreadyTransparent = true
       }
     }
