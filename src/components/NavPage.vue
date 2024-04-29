@@ -123,21 +123,20 @@ a {
   transform: translateY(0.2vw);
 }
 
-
-@media only screen and (max-width: 600px){
-  .navPage{
+@media only screen and (max-width: 600px) {
+  .navPage {
     width: 100%;
     height: available;
     align-items: center;
     overflow: hidden;
   }
-  .pageLink{
+  .pageLink {
     font-size: 10vw;
-    margin:0;
+    margin: 0;
     width: 42vw;
     text-align: left;
   }
-  .cv{
+  .cv {
     display: none;
   }
 }

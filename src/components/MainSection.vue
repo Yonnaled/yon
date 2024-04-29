@@ -1,6 +1,6 @@
 <script setup lang="ts">
 document.addEventListener('scroll', () => {
-  if(!window.matchMedia("(max-width: 700px)").matches){
+  if (!window.matchMedia('(max-width: 700px)').matches) {
     document.querySelectorAll<HTMLElement>('.scroll-3').forEach((element) => {
       element.style.transform = `translateY(${-window.scrollY / 2}px)`
     })
@@ -8,25 +8,37 @@ document.addEventListener('scroll', () => {
 })
 
 // for resizing window on mobile browser
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-let resized=false;
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty('--vh', `${vh}px`)
+let resized = false
 window.addEventListener('resize', () => {
-  if(!resized){
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    resized=true;
+  if (!resized) {
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    resized = true
   }
-});
-
-
+})
 </script>
 
 <template>
   <div class="main">
     <div class="bg-video scroll-3">
-      <video class="video" src="../assets/video/bg-logo.mov" playsinline autoplay loop muted></video>
-      <video class="video-mobile" src="../assets/video/bg-logo-mobile.mp4" playsinline autoplay loop muted></video>
+      <video
+        class="video"
+        src="../assets/video/bg-logo.mov"
+        playsinline
+        autoplay
+        loop
+        muted
+      ></video>
+      <video
+        class="video-mobile"
+        src="../assets/video/bg-logo-mobile.mp4"
+        playsinline
+        autoplay
+        loop
+        muted
+      ></video>
     </div>
     <div class="title">
       <div class="welcome scroll-3">
@@ -59,7 +71,7 @@ video {
   transform: translateY(-18vw);
   filter: brightness(60%);
 }
-.video-mobile{
+.video-mobile {
   display: none;
 }
 
@@ -102,47 +114,49 @@ video {
 }
 
 @media only screen and (max-width: 600px) {
-  .main{
+  .main {
     width: 100vw;
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
   }
-  .bg-video{
+  .bg-video {
     overflow: hidden;
     width: 100vw;
   }
-  .video-mobile{
+  .video-mobile {
     display: block;
   }
-  .video{
+  .video {
     display: none;
   }
-  video{
+  video {
     height: 100vh;
     filter: brightness(60%);
     transform: translateY(-10vh);
     max-width: 100vw;
   }
 
-  .title{
+  .title {
     top: 60vh;
     width: 95vw;
     max-width: 100vw;
     transform: translateX(-50%);
     position: relative;
   }
-  .welcome{
+  .welcome {
     font-size: 7vw;
   }
-  .feixen{
-    font-variation-settings: 'wght' 700, 'wdth' 125 !important;
+  .feixen {
+    font-variation-settings:
+      'wght' 700,
+      'wdth' 125 !important;
     padding-bottom: 2vh;
   }
-  .webyon{
+  .webyon {
     font-variation-settings: 'wght' 600 !important;
     width: 90vw;
   }
-  .st{
+  .st {
     width: 95%;
     font-size: 5vw;
     margin-left: 0;

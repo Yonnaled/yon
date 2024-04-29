@@ -112,30 +112,30 @@ onMounted(() => {
   transition: all 300ms ease-out;
 }
 
-@media only screen and (max-width: 600px){
-  .cursor{
+@media only screen and (max-width: 600px) {
+  .cursor {
     display: none;
   }
-  .content{
+  .content {
     flex-direction: column;
     width: 80vw;
   }
-  .header{
+  .header {
     font-size: 6vw;
     font-weight: 500;
     width: 80vw;
     padding-bottom: 5vh;
   }
-  .title{
+  .title {
     font-size: 5vw;
     width: 100%;
   }
-  .desc{
+  .desc {
     width: 100%;
     font-size: 4vw;
     font-weight: 500;
   }
-  .divider{
+  .divider {
     font-weight: 400;
     font-size: 5vw;
   }

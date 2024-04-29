@@ -132,44 +132,44 @@ img {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px){
-  .creativity{
-    color:#fffaf1;
+@media only screen and (max-width: 600px) {
+  .creativity {
+    color: #fffaf1;
     background-color: #131313;
     padding: 20vw 0 30vw;
   }
-  .text{
-    font-size:12vw;
+  .text {
+    font-size: 12vw;
     animation: animate_text 30s linear infinite;
   }
   .text span {
-   margin: 0 4vw;
- }
+    margin: 0 4vw;
+  }
   .scrolling-text:hover > * {
     animation-play-state: unset;
   }
-  img{
+  img {
     height: 10vw;
   }
-  .earth-gif{
+  .earth-gif {
     height: 6vw;
   }
 
-  .content{
+  .content {
     flex-direction: column;
     align-items: center;
     width: 100vw;
   }
-  .title{
+  .title {
     font-size: 8vw;
     width: 90vw;
     padding-bottom: 10vw;
   }
-  .desc{
+  .desc {
     width: 90vw;
     font-size: 5vw;
   }
-  .finally{
+  .finally {
     text-align: left;
     width: 90vw;
     font-size: 6vw;

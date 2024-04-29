@@ -2,8 +2,10 @@
 import { ref } from 'vue'
 
 function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-      window.innerWidth<600;
+  return (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+    window.innerWidth < 600
+  )
 }
 
 let work = ref([
@@ -48,7 +50,6 @@ let showImg = ref([
   work.value[3].showImg
 ])
 
-
 const getImageUrl = (name) => {
   return new URL(`../assets/${name}`, import.meta.url).href
 }
@@ -69,7 +70,12 @@ const getImageUrl = (name) => {
       >
         <div class="name">{{ row.name }}</div>
         <Transition>
-          <img :src="getImageUrl(row.img)" :class="['img' + row.name]" alt="" v-show="row.showImg || isMobile()" />
+          <img
+            :src="getImageUrl(row.img)"
+            :class="['img' + row.name]"
+            alt=""
+            v-show="row.showImg || isMobile()"
+          />
         </Transition>
         <div class="desc">{{ $t('work.' + row.desc) }}</div>
         <div class="stack">
@@ -189,7 +195,7 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .table{
+  .table {
     padding-bottom: 20vw;
   }
   h1 {
@@ -199,37 +205,37 @@ img {
     text-decoration-thickness: 1px;*/
     display: none;
   }
-  .row{
-    border-top:none;
+  .row {
+    border-top: none;
     border-bottom: 1px solid black;
     display: block;
     height: auto;
   }
-  .table>.row:nth-last-child(1){
+  .table > .row:nth-last-child(1) {
     border-bottom: 0px;
   }
-  .name{
+  .name {
     font-size: 12vw;
     padding-top: 4vw;
   }
-  .desc{
-    font-size:4vw;
+  .desc {
+    font-size: 4vw;
     width: auto;
     padding-top: 2vw;
   }
-  .stack{
-    font-size:4vw;
+  .stack {
+    font-size: 4vw;
     width: auto;
     padding-bottom: 2vw;
   }
-  .stack-element{
+  .stack-element {
     padding: 0 2vw 0 0;
   }
-  img{
+  img {
     position: relative !important;
     transform: none !important;
     width: 100%;
-    padding-top:1vw
+    padding-top: 1vw;
   }
 }
 </style>

@@ -1,26 +1,27 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 
-function isMobileDevice (){
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-  window.innerWidth<600;
+function isMobileDevice() {
+  return (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+    window.innerWidth < 600
+  )
 }
 
-let alreadyTransparent = true;
+let alreadyTransparent = true
 
-onMounted(()=>{
-  let navPannel = document.getElementById("navPannel");
-  document.addEventListener("scroll",() =>{
-    if (isMobileDevice()){
-      if (window.scrollY >= window.innerHeight){
-        if(alreadyTransparent){
-          navPannel.style.backgroundColor="#fffaf1";
+onMounted(() => {
+  let navPannel = document.getElementById('navPannel')
+  document.addEventListener('scroll', () => {
+    if (isMobileDevice()) {
+      if (window.scrollY >= window.innerHeight) {
+        if (alreadyTransparent) {
+          navPannel.style.backgroundColor = '#fffaf1'
           alreadyTransparent = false
         }
-      }
-      else if (!alreadyTransparent){
-        navPannel.style.backgroundColor="";
-        alreadyTransparent = true;
+      } else if (!alreadyTransparent) {
+        navPannel.style.backgroundColor = ''
+        alreadyTransparent = true
       }
     }
   })
@@ -156,8 +157,8 @@ onMounted(()=>{
   transform: translateY(-98%);
 }
 
-@media only screen and (max-width: 600px){
-  .navPannel{
+@media only screen and (max-width: 600px) {
+  .navPannel {
     height: auto;
     width: 100vw;
     border-right: 0 !important;
@@ -171,7 +172,7 @@ onMounted(()=>{
     z-index: 100;
   }
 
-  .logo{
+  .logo {
     padding-top: 0;
   }
   .logo > img {
@@ -186,7 +187,7 @@ onMounted(()=>{
     padding: 1.5vh 7vw;
   }
 
-  .icons{
+  .icons {
     display: none;
   }
 }

@@ -38,13 +38,13 @@ body {
   font-family: Brico;
 }
 
-
 @media only screen and (max-width: 600px) {
-  body, html{
-    background-color:#fffaf1;
+  body,
+  html {
+    background-color: #fffaf1;
   }
 
-  html{
+  html {
     height: available;
     max-height: available;
   }

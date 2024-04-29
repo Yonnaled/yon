@@ -169,8 +169,8 @@ const getImageUrl = (name) => {
 </template>
 
 <style scoped>
-.only-mobile{
-  display:none;
+.only-mobile {
+  display: none;
 }
 .folder {
   position: relative;
@@ -546,14 +546,14 @@ const getImageUrl = (name) => {
 }
 
 @media only screen and (max-width: 600px) {
-  .title{
+  .title {
     position: relative;
     background-color: #fffaf1;
-    display:block;
+    display: block;
     padding: 10vh 5vw 0;
     font-size: 7vw;
   }
-  .folder{
+  .folder {
     height: auto;
     width: 100vw;
     overflow: hidden;
@@ -562,43 +562,48 @@ const getImageUrl = (name) => {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
     padding-top: 0;
     padding-bottom: 10vh;
   }
-  .secret-files, .drawer, .drawer-wall, .cover-drawer-invisible, .page::before, .page::after,
-  .page-divider{
-    display:none;
+  .secret-files,
+  .drawer,
+  .drawer-wall,
+  .cover-drawer-invisible,
+  .page::before,
+  .page::after,
+  .page-divider {
+    display: none;
   }
-  button{
+  button {
     color: black !important;
     margin: 0 !important;
-    padding:0 !important;
+    padding: 0 !important;
     position: relative !important;
     top: auto !important;
     left: auto !important;
     transform: none !important;
     font-size: 5vw !important;
   }
-  .subtitle{
-    margin: 0  !important;
+  .subtitle {
+    margin: 0 !important;
   }
-  .details{
-    margin: 0  !important;
+  .details {
+    margin: 0 !important;
   }
-  .page{
+  .page {
     height: 45vw;
     width: 42vw;
-    position:relative;
+    position: relative;
     transform: none !important;
     padding: 2vh 0 10vh;
     border: none;
   }
-  .img-container{
+  .img-container {
     height: 80%;
   }
-  img{
+  img {
     max-height: 45vw;
     max-width: 45vw;
   }
