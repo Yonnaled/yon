@@ -138,6 +138,7 @@ const getImageUrl = (name) => {
 </script>
 
 <template>
+  <div class="title only-mobile">{{ $t('folder.title') }}</div>
   <div class="folder">
     <div
       v-for="page in pages"
@@ -168,6 +169,9 @@ const getImageUrl = (name) => {
 </template>
 
 <style scoped>
+.only-mobile{
+  display:none;
+}
 .folder {
   position: relative;
   z-index: 1;
@@ -542,8 +546,61 @@ const getImageUrl = (name) => {
 }
 
 @media only screen and (max-width: 600px) {
+  .title{
+    position: relative;
+    background-color: #fffaf1;
+    display:block;
+    padding: 10vh 5vw 0;
+    font-size: 7vw;
+  }
   .folder{
+    height: auto;
+    width: 100vw;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap:wrap;
+
+    padding-top: 0;
+    padding-bottom: 10vh;
+  }
+  .secret-files, .drawer, .drawer-wall, .cover-drawer-invisible, .page::before, .page::after,
+  .page-divider{
+    display:none;
+  }
+  button{
+    color: black !important;
+    margin: 0 !important;
+    padding:0 !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    font-size: 5vw !important;
+  }
+  .subtitle{
+    margin: 0  !important;
+  }
+  .details{
+    margin: 0  !important;
+  }
+  .page{
+    height: 45vw;
+    width: 42vw;
+    position:relative;
+    transform: none !important;
+    padding: 2vh 0 10vh;
+    border: none;
+  }
+  .img-container{
+    height: 80%;
+  }
+  img{
+    max-height: 45vw;
+    max-width: 45vw;
   }
 }
 </style>
