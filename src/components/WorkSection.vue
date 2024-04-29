@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 
 function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      window.innerWidth<600;
 }
 
 let work = ref([
@@ -68,7 +69,7 @@ const getImageUrl = (name) => {
       >
         <div class="name">{{ row.name }}</div>
         <Transition>
-          <img :src="getImageUrl(row.img)" :class="['img' + row.name]" alt="" v-show="row.showImg || isMobile" />
+          <img :src="getImageUrl(row.img)" :class="['img' + row.name]" alt="" v-show="row.showImg || isMobile()" />
         </Transition>
         <div class="desc">{{ $t('work.' + row.desc) }}</div>
         <div class="stack">
