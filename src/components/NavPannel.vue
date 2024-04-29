@@ -1,7 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from 'vue'
+
+function isMobileDevice (){
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+  window.innerWidth<600;
+}
+
+let alreadyTransparent = true;
+
+onMounted(()=>{
+  let navPannel = document.getElementById("navPannel");
+  document.addEventListener("scroll",() =>{
+    if (isMobileDevice()){
+      if (window.scrollY >= window.innerHeight){
+        if(alreadyTransparent){
+          navPannel.style.backgroundColor="#fffaf1";
+          alreadyTransparent = false
+        }
+      }
+      else if (!alreadyTransparent){
+        navPannel.style.backgroundColor="";
+        alreadyTransparent = true;
+      }
+    }
+  })
+})
+</script>
 
 <template>
-  <div class="navPannel">
+  <div class="navPannel" id="navPannel">
     <div class="nav-wrapper">
       <RouterLink to="/" class="logo link">
         <img src="../assets/img/logo.png" />
@@ -131,7 +158,36 @@
 
 @media only screen and (max-width: 600px){
   .navPannel{
-    display: none !important;
+    height: auto;
+    width: 100vw;
+    border-right: 0 !important;
+  }
+  .nav-wrapper {
+    height: auto;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+  }
+
+  .logo{
+    padding-top: 0;
+  }
+  .logo > img {
+    width: 3vh;
+    height: 3vh;
+    padding: 1.5vh 7vw;
+  }
+
+  .nav {
+    width: 3vh;
+    height: 3vh;
+    padding: 1.5vh 7vw;
+  }
+
+  .icons{
+    display: none;
   }
 }
 </style>
