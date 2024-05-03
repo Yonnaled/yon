@@ -30,7 +30,7 @@ const pages = ref([
     id: 4,
     name: 'human',
     shown: false,
-    content: 'model/plant-01.gif'
+    content: ''
   },
   {
     id: 5,
@@ -90,7 +90,7 @@ const pages = ref([
     id: 14,
     name: 'amplifier',
     shown: false,
-    content: 'model/plant-01.gif'
+    content: 'model/ampli.gif'
   },
   {
     id: 15,
@@ -102,7 +102,7 @@ const pages = ref([
     id: 16,
     name: 'strokes',
     shown: false,
-    content: 'model/plant-01.gif'
+    content: 'model/strokes.gif'
   },
   {
     id: 17,
