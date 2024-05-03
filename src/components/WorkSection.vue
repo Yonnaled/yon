@@ -18,12 +18,12 @@ let work = ref([
     img: 'img/aftermath-illu.png'
   },
   {
-    name: 'Blur',
-    desc: 'blur',
-    stack: ['Angular'],
+    name: 'Attempt',
+    desc: 'attempt',
+    stack: ['Angular','SpringBoot','PostgreSQL'],
     showImg: false,
-    url: 'https://blur.yonnaled.com',
-    img: 'img/blur-illu.png'
+    url: 'https://attempt.yonnaled.com',
+    img: 'img/attempt-illu.png'
   },
   {
     name: 'Weather',
@@ -159,7 +159,7 @@ img {
   position: absolute;
   transform: translate(18vw, 12vw);
 }
-.imgBlur {
+.imgAttempt {
   position: absolute;
   transform: translate(18vw, 4vw);
 }
