@@ -31,7 +31,7 @@ let work = ref([
     stack: ['React'],
     showImg: false,
     url: 'https://weather.yonnaled.com',
-    img: 'img/weather-illu.png'
+    img: 'img/weather.png'
   },
   {
     name: 'Portfolio',
