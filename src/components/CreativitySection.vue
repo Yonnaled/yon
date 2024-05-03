@@ -51,6 +51,7 @@
   display: flex;
   white-space: nowrap;
   transition: 500ms ease-out;
+  cursor: default;
 }
 
 .text {
