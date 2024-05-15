@@ -30,7 +30,7 @@ const pages = ref([
     id: 4,
     name: 'human',
     shown: false,
-    content: ''
+    content: 'img/coming-soon.png'
   },
   {
     id: 5,
