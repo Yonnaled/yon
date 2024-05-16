@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import cv from "../../public/VivianDELANNOY_CV.pdf"
+const cvLink = cv;
+</script>
 
 <template>
   <div class="navPage">
@@ -23,7 +26,7 @@
       </RouterLink>
     </div>
 
-    <a href="/src/assets/pdf/VivianDELANNOY_CV.pdf" download="VivianDELANNOY_CV" class="cv">
+    <a :href="cvLink" target="_blank" class="cv">
       <img src="../assets/img/profile-pic.jpg" alt="" />
       <div class="content">
         <div class="title feixen">curriculum</div>
