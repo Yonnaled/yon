@@ -89,6 +89,7 @@ a {
 
   display: flex;
   justify-content: space-between;
+  font-size: .8vw;
 }
 
 .cv img {

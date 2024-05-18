@@ -545,7 +545,7 @@ const getImageUrl = (name:string | undefined) => {
   transform: translateY(-10%);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .title {
     position: relative;
     background-color: #fffaf1;
