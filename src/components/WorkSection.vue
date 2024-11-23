@@ -34,6 +34,14 @@ let work = ref([
     img: 'img/weather.png'
   },
   {
+    name: 'Coriandoli',
+    desc: 'coriandoli',
+    stack: ['Vue.js'],
+    showImg: false,
+    url: 'https://coriando.li/',
+    img: 'img/coriandoli-mappa.jpg'
+  },
+  {
     name: 'Portfolio',
     desc: 'portfolio',
     stack: ['Vue.js', 'GSAP', 'Lennis smooth scroll'],
@@ -47,7 +55,8 @@ let showImg = ref([
   work.value[0].showImg,
   work.value[1].showImg,
   work.value[2].showImg,
-  work.value[3].showImg
+  work.value[3].showImg,
+  work.value[4].showImg
 ])
 
 const getImageUrl = (name:string) => {
@@ -157,19 +166,23 @@ img {
 
 .imgAftermath {
   position: absolute;
-  transform: translate(18vw, 12vw);
+  transform: translate(18vw, 16vw);
 }
 .imgAttempt {
   position: absolute;
-  transform: translate(18vw, 4vw);
+  transform: translate(18vw, 8vw);
 }
 .imgWeather {
   position: absolute;
-  transform: translate(18vw, -4vw);
+  transform: translate(18vw, 0vw);
+}
+.imgCoriandoli {
+  position: absolute;
+  transform: translate(18vw, -8vw);
 }
 .imgPortfolio {
   position: absolute;
-  transform: translate(18vw, -12vw);
+  transform: translate(18vw, -16vw);
 }
 
 .illustrations {
